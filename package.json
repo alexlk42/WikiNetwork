@@ -1,0 +1,22 @@
+{
+  "name": "wikinetwork",
+  "version": "1.0.0",
+  "description": "An application for viewing Wikipedia as a graph.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlk42/WikiNetwork.git"
+  },
+  "author": "CSCI5828 Team 1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlk42/WikiNetwork/issues"
+  },
+  "homepage": "https://github.com/alexlk42/WikiNetwork#readme",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
