@@ -12,6 +12,7 @@
 // Import required packages
 const express = require('express');
 const app = express();
+const WikiData = require('./wikiData');
 
 // Header info
 const header = `CSCI 5828<br>Homework 4<br>Team 1<br>Simple Form`;
@@ -24,12 +25,12 @@ const form = function(data) {
                 <input id="data" name="data" type="text" value="${data}">
                 <input type="submit" value="Send Name">
                 </form>`;
-}
+};
 
 
 // Setup simple routing
 app.get('/', (req, res) => {
-        if (req.query.data) {
+        /*if (req.query.data) {
                 res.send(`${header}
                         <br><br>
                         Welcome, ${req.query.data}!!!
@@ -38,7 +39,8 @@ app.get('/', (req, res) => {
                 res.send(`${header}
                         <br><br>
                         ${form(req.query.data)}`);
-        }
+        }*/
+        WikiData.testCall(result => res.send(JSON.stringify(result)));
 });
 
 // Listen on port

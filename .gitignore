@@ -1,4 +1,5 @@
 .DS_Store
+.jshintrc
 
 #
 # The rest of this .gitignore from https://github.com/github/gitignore/blob/master/Node.gitignore
