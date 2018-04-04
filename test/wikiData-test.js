@@ -8,17 +8,9 @@ describe('wikiData', () => {
   });
 
   it('should return 5 links', done => {
-    WikiData.getForwardLinks(['Computer_science'], 5, (result) => {
+    WikiData.getForwardLinks('Computer_science', 5, (result) => {
       expect(result).to.have.a.property('query');
       expect(result.query.pages[0].links.length).to.equal(5);
-      done();
-    });
-  });
-
-  it('should return results for 2 pages', done => {
-    WikiData.getForwardLinks(['Computer_science', 'IBM'], 1, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages.length).to.equal(2);
       done();
     });
   });

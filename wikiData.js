@@ -89,12 +89,12 @@ class WikiData {
    * Gets the forward links for the give page (specified by title). Will invoke
    * the given callback once results are ready. Passes the parsed JSON to the callback.
    *
-   * titles: an array of strings where each string should be a title.
+   * title: should be a title as a string.
    * limit: the max number of links to return.
    * callback: the function to call once the results are in.
    */
-  static getForwardLinks (titles, limit, callback) {
-    this.callAPI(this.createURLString('links', titles) + `&pllimit=${limit};`, callback);
+  static getForwardLinks (title, limit, callback) {
+    this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, callback);
   }
 }
 
