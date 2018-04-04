@@ -4,7 +4,7 @@
   "description": "An application for viewing Wikipedia as a graph.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/alexlk42/WikiNetwork#readme",
   "devDependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mocha": "3.4.2"
   }
 }
