@@ -96,6 +96,16 @@ class WikiData {
   static getForwardLinks (title, limit, callback) {
     this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, callback);
   }
+
+  /*
+   * Gets the description for the given page by title.
+   *
+   * title: should be a title as a string.
+   * callback: the function to call once the results are in.
+   */
+  static getDescription (title, callback) {
+    this.callAPI(this.createURLString('description', [title]), callback);
+  }
 }
 
 // Export the WikiData class.
