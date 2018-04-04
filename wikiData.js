@@ -31,26 +31,33 @@ const DEL = '|';
  * A helper function that creates the correct API url to do the wanted call.
  * This function is private to this module.
  */
-const createURLString = function(prop, titles) {
-  return `${API_URL}?action=${ACTION}&titles=${titles.join(DEL)}&prop=${prop}&format=${FORMAT}&formatversion=${FORMAT_VERSION}`;
+const createURLString = function (prop, titles) {
+  let tls = titles.join(DEL); // Join the titles
+  return `${API_URL}?` +
+        `action=${ACTION}` +
+        `&titles=${tls}` +
+        `&prop=${prop}` +
+        `&format=${FORMAT}` +
+        `&formatversion=${FORMAT_VERSION}`;
 };
 
 /*
  * A helper function that makes a call to the MediaWiki API.
  * This function is private to this module.
  */
-const callAPI = function(url, callback) {
+const callAPI = function (url, callback) {
   if (!url) {
     console.error('URL is not valid! Not doing API call.');
     return;
   }
+
   if (!callback) {
     console.error('No callback! No point in doing API call.');
     return;
   }
 
   // Do an https GET to the given URL.
-  https.get(url, function(res) {
+  https.get(url, function (res) {
     if (!res) {
       console.error('No response!');
       return;
@@ -61,12 +68,12 @@ const callAPI = function(url, callback) {
 
     // Collect result
     let result = '';
-    res.on('data', function(data) {
+    res.on('data', function (data) {
       result += data;
     });
 
     // Once result is fully here, we can parse and do callback
-    res.on('end', function() {
+    res.on('end', function () {
       callback(JSON.parse(result));
     });
   });
