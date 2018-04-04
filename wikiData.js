@@ -89,8 +89,8 @@ class WikiData {
    * Gets the forward links for the give page (specified by title). Will invoke
    * the given callback once results are ready. Passes the parsed JSON to the callback.
    */
-  static getForwardLinks(title, callback) {
-    callAPI(createURLString('links', [title]), callback);
+  static getForwardLinks(titles, limit, callback) {
+    callAPI(createURLString('links', titles) + `&pllimit=${limit};`, callback);
   }
 }
 
