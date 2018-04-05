@@ -28,6 +28,28 @@ const FORMAT_VERSION = '2';
 const DEL = '|';
 
 /*
+ * Helper that extracts the desired field as an array (array of field data)
+ * from the JSON result object. The array in the page, named by prop, is an
+ * array of objects who should have a field named field. Will return empty
+ * array if the given result is not as expected.
+ */
+const makeResultArray = function (result, prop, field) {
+  let finalResult = [];
+
+  // Make sure the result is valid, and if so, then collect final result.
+  if (result && result.query && result.query.pages && result.query.pages[0] &&
+    result.query.pages[0][prop]) {
+
+    // Iterate over each object and push its field of interest onto the final result.
+    result.query.pages[0][prop].forEach(object => {
+      if (object[field]) finalResult.push(object[field]);
+    });
+  }
+
+  return finalResult;
+};
+
+/*
  * The actual WikiData class. All methods are static because they don't
  * need any state from an instance and are utility methods.
  */
@@ -87,7 +109,7 @@ class WikiData {
 
   /*
    * Gets the forward links for the give page (specified by title). Will invoke
-   * the given callback once results are ready. Passes the parsed JSON to the callback.
+   * the given callback once results are ready. Passes an array of links to the callback.
    *
    * If limit is less than one, no action will happen. If limit is greater than
    * 500, then it will be capped at 500 and called with 500.
@@ -101,7 +123,11 @@ class WikiData {
   static getForwardLinks (title, limit, callback) {
     if (limit > 0) {
       limit = (limit > 500) ? 500 : limit;
-      this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, callback);
+      this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
+
+        // Call the user's callback, given the links
+        callback(makeResultArray(result, 'links', 'title'));
+      });
       return true;
     }
     return false;
@@ -109,7 +135,7 @@ class WikiData {
 
   /*
    * Gets the categories for the give page (specified by title). Will invoke
-   * the given callback once results are ready. Passes the parsed JSON to the callback.
+   * the given callback once results are ready. Passes an array of categories to the callback.
    *
    * If limit is less than one, no action will happen. If limit is greater than
    * 50, then it will be capped at 50 and called with 50.
@@ -123,7 +149,11 @@ class WikiData {
   static getCategories(title, limit, callback) {
     if (limit > 0) {
       limit = (limit > 50) ? 50 : limit;
-      this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, callback);
+      this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, result => {
+
+        // Call the user's callback, given the categories
+        callback(makeResultArray(result, 'categories', 'title'));
+      });
       return true;
     }
     return false;
@@ -131,6 +161,7 @@ class WikiData {
 
   /*
    * Gets the description for the given page by title.
+   * Passes a string of the description to the callback.
    *
    * title: should be a title as a string.
    * callback: the function to call once the results are in.

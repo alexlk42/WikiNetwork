@@ -28,8 +28,7 @@ describe('wikiData', () => {
    */
   it('should return 1 link', done => {
     let res = WikiData.getForwardLinks('Computer_science', 1, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].links.length).to.equal(1);
+      expect(result.length).to.equal(1);
       done();
     });
     expect(res).to.be.true;
@@ -41,8 +40,7 @@ describe('wikiData', () => {
    */
   it('should return 5 links', done => {
     let res = WikiData.getForwardLinks('Computer_science', 5, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].links.length).to.equal(5);
+      expect(result.length).to.equal(5);
       done();
     });
     expect(res).to.be.true;
@@ -55,8 +53,7 @@ describe('wikiData', () => {
    */
   it('should return 500 links', done => {
     let res = WikiData.getForwardLinks('Computer_science', 600, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].links.length).to.equal(500);
+      expect(result.length).to.equal(500);
       done();
     });
     expect(res).to.be.true;
@@ -79,8 +76,7 @@ describe('wikiData', () => {
    */
   it('should return 1 category', done => {
     let res = WikiData.getCategories('Computer_science', 1, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].categories.length).to.equal(1);
+      expect(result.length).to.equal(1);
       done();
     });
     expect(res).to.be.true;
@@ -92,8 +88,7 @@ describe('wikiData', () => {
    */
   it('should return 5 categories', done => {
     let res = WikiData.getCategories('Computer_science', 5, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].categories.length).to.equal(5);
+      expect(result.length).to.equal(5);
       done();
     });
     expect(res).to.be.true;
@@ -106,8 +101,7 @@ describe('wikiData', () => {
    */
   it('should return 50 categories', done => {
     let res = WikiData.getCategories('Elon Musk', 60, (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].categories.length).to.equal(50);
+      expect(result.length).to.equal(50);
       done();
     });
     expect(res).to.be.true;

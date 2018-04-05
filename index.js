@@ -15,8 +15,9 @@ const WikiData = require('./wikiData');
 
 // Setup simple routing
 app.get('/', (req, res) => {
-  //WikiData.getForwardLinks('Computer_science', 0, result => res.send(JSON.stringify(result)));
-  WikiData.getDescription('Computer_science', result => res.send(JSON.stringify(result)));
+  WikiData.getCategories('Computer_science', 5, result => res.send(JSON.stringify(result)));
+  //WikiData.getForwardLinks('Computer_science', 1, result => res.send(JSON.stringify(result)));
+  //WikiData.getDescription('Computer_science', result => res.send(JSON.stringify(result)));
 });
 
 // Listen on port
