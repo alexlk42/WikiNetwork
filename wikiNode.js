@@ -65,5 +65,48 @@ class WikiNode {
     };
 
   }
+
+  /*
+   * The following static methods are used to
+   * generate an appropriate JSON file from an array
+   * of nodes.
+   */
+
+  //Creates the first half of the JSON including
+  //all titles
+  static createIDArr(nodeArray){
+    let idArr = [];
+    nodeArray.forEach(node=>{
+      idArr.push(JSON.stringify({ id: node.title}))
+    });
+    return idArr;
+  }
+
+  //Creates the second half of the JSON including
+  //all links
+  static createLinksArr(nodeArray){
+    let linksArr = [];
+    nodeArray.forEach(node=>{
+      links = node.forwardLinks;
+      links.forEach(link=>{
+	linksArr.push(JSON.stringify({
+	  source: node.title,
+	  target: link,
+	  value: 1
+	}));
+      });
+    });
+    return linksArr;
+  }
+
+  //combines the first and second half of the JSON
+  static nodeArrayPrint(nodeArray,callback){
+    let fullString = JSON.stringify({
+      nodes: createIDArr(nodeArray),
+      links: createLinksArr(nodeArray)
+    });
+    callback(fullString);
+  }
 }
+
 module.exports = WikiNode;
