@@ -9,7 +9,7 @@ if len(sys.argv)==1:
             "day points...\n")
 
 else:
-    dat = np.loadtxt(sys.argv[1])
+    dat = np.loadtxt(sys.argv[1],usecols=(0,1))
     if len(np.shape(dat))==1: #1 dimension
         print("\nOnly initial data is provided, a chart is not possible\n")
 
@@ -48,9 +48,9 @@ else:
         for point in range(len(points))[1:]:
             if points[point]!=points[point-1]:
                 if point==len(points)-1 or points[point] > points[point+1]:
-                    plt.text(iterations[point], points[point]+1,str(int(points[point])),fontsize=16)
+                    plt.text(iterations[point], points[point]+1,str(points[point]),fontsize=16)
                 else:
-                    plt.text(iterations[point], points[point]-2,str(int(points[point])),fontsize=16)
+                    plt.text(iterations[point], points[point]-2,str(points[point]),fontsize=16)
 
         plt.legend(fontsize=24) 
         plt.savefig("daily-burndown.png")
