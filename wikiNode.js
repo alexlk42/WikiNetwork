@@ -33,9 +33,9 @@ class WikiNode {
   // Find forwardLinks
   findForwardLinks(callback) {
     WikiData.getForwardLinks(this.title, this.branches, result => {
-      var links = result.query.pages[0].links;
+      var links = result;
       links.forEach(link=>{
-	this.forwardLinks.push(new WikiNode(link.title));
+	this.forwardLinks.push(new WikiNode(link));
       });
       callback();
     });
