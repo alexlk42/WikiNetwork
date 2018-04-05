@@ -89,12 +89,44 @@ class WikiData {
    * Gets the forward links for the give page (specified by title). Will invoke
    * the given callback once results are ready. Passes the parsed JSON to the callback.
    *
+   * If limit is less than one, no action will happen. If limit is greater than
+   * 500, then it will be capped at 500 and called with 500.
+   *
    * title: should be a title as a string.
    * limit: the max number of links to return.
    * callback: the function to call once the results are in.
+   *
+   * return: true if an API call was made, false otherwise.
    */
   static getForwardLinks (title, limit, callback) {
-    this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, callback);
+    if (limit > 0) {
+      limit = (limit > 500) ? 500 : limit;
+      this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, callback);
+      return true;
+    }
+    return false;
+  }
+
+  /*
+   * Gets the categories for the give page (specified by title). Will invoke
+   * the given callback once results are ready. Passes the parsed JSON to the callback.
+   *
+   * If limit is less than one, no action will happen. If limit is greater than
+   * 50, then it will be capped at 50 and called with 50.
+   *
+   * title: should be a title as a string.
+   * limit: the max number of categories to return.
+   * callback: the function to call once the results are in.
+   *
+   * return: true if an API call was made, false otherwise.
+   */
+  static getCategories(title, limit, callback) {
+    if (limit > 0) {
+      limit = (limit > 50) ? 50 : limit;
+      this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, callback);
+      return true;
+    }
+    return false;
   }
 
   /*
@@ -102,9 +134,12 @@ class WikiData {
    *
    * title: should be a title as a string.
    * callback: the function to call once the results are in.
+   *
+   * return: true if an API call was made, false otherwise.
    */
   static getDescription (title, callback) {
     this.callAPI(this.createURLString('description', [title]), callback);
+    return true;
   }
 }
 
