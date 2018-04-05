@@ -1,12 +1,15 @@
+'use strict';
+const WikiData = require('./wikiData');
+
 /****************
  *
  * This class describes the "nodes" that exist on the graph.
- * It acts as a bridge between the WikiData class, which
+ * It acts as a bridge between the wikiData class, which
  * retrieves the necessary data from Wikipedia, and our
  * implementation of the graph in D3.
  *
  * *****************/
-class wikiNode {
+class WikiNode {
 
   /* constructor
    * Creates a node with the given title.
@@ -16,8 +19,10 @@ class wikiNode {
    */
   constructor(title){
     this.title = title;
-    this.data = new WikiData(); //Creates WikiData class for retrieving data
     this.branches = 0; //default to 0
+    this.forwardLinks = [];
+    this.categories = [];
+    this.description = '';
   }
 
   // Update branch number
@@ -25,25 +30,40 @@ class wikiNode {
     this.branches = num;
   }
 
-  // forwardLinks getter
-  get forwardLinks() {
-    return this.findForwardLinks(num);
+  // Find forwardLinks
+  findForwardLinks(callback) {
+    WikiData.getForwardLinks(this.title, this.branches, result => {
+      this.forwardLinks = result;
+      callback();
+    });
   }
 
-  // forwardLinks Method
-  findForwardLinks(num) {
-    if (num==0){
-      console.error('Branch number is currently set to 0 for this node, cannot get next nodes');
-      return;
-    }else{
-      res = [];
-      this.data.getForwardLinks(this.title, num, result => {
-	links = result.query.pages[0].links;
-	links.forEach(link => res.push(link.title));
-      });
-      return res;
-    }
-
+  // Find categories
+  findCategories(callback){
+    WikiData.getCategories(this.title, result => {
+      this.categories = result;
+      callback();
+    });
   }
 
+  // Find description
+  findDescription(callback){
+    WikiData.getDescription(this.title, result => {
+      this.description = result;
+      callback();
+    });
+  }
+
+  // JSON stringify
+  toJSON() {
+    return {
+      title: this.title,
+      branches: this.branches,
+      forwardLinks: this.forwardLinks,
+      categories: this.categories,
+      description: this.description
+    };
+
+  }
 }
+module.exports = WikiNode;
