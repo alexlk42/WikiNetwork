@@ -138,7 +138,11 @@ class WikiData {
    * return: true if an API call was made, false otherwise.
    */
   static getDescription (title, callback) {
-    this.callAPI(this.createURLString('description', [title]), callback);
+    this.callAPI(this.createURLString('description', [title]), result => {
+
+      // Call the user's callback, given the description
+      callback(result.query.pages[0].description);
+    });
     return true;
   }
 }

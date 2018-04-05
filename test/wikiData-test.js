@@ -120,11 +120,11 @@ describe('wikiData', () => {
 
     // Description for the Computer Science page on Wikipedia
     // https://en.wikipedia.org/wiki/Computer_science
+    // This is the exact description that we expect the Wikipedia API to return
     const EXPECTED = 'study of the theoretical foundations of information and computation';
 
     let res = WikiData.getDescription('Computer_science', (result) => {
-      expect(result).to.have.a.property('query');
-      expect(result.query.pages[0].description).to.equal(EXPECTED);
+      expect(result).to.equal(EXPECTED);
       done();
     });
     expect(res).to.be.true;
