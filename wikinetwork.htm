@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+	
+		<link rel="stylesheet" type="text/css" href="wikinetwork.css" media="screen" />		
+		<link rel="stylesheet" type="text/css" href="force_directed_style.css"/>
+		
+	</head>
+
+    <body>
+		
+ 
+		<!-- Sidebar -->
+		<div class="sidebar">
+		  <a href="#about">About</a>
+		  <a href="#nodeinfo">Node Info</a>
+		    <BLOCKQUOTE>Node Metadata</BLOCKQUOTE>
+		  
+		</div>
+		<!-- /sidebar-->
+
+		
+		<div class="main">
+		  <h3>Welcome to WikiNetwork</h3>
+		  <form action = "http://127.0.0.1:3000/clear" method = "GET">
+			 <input type = "submit" value = "Clear Graph">
+		  </form> 
+		  
+		  <p>Please enter a Wikipedia subject in the field and click Search</p>
+		  <form action = "http://127.0.0.1:3000/process_get" method = "GET">
+			  Wikipedia Search: <input type = "text" name = "search_name">
+			 <input type = "submit" value = "Search">
+		  </form> 
+		
+		</div>    
+		 
+ 
+ 
+    </body>
+	
+		<svg width="960" height="600"></svg>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="force_directed_network.js"></script>
+		
+</html>

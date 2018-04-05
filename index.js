@@ -2,23 +2,43 @@
  * CSCIC 5828 - Spring 2018
  * Team 1
  *
- * References
- * 1. https://hackernoon.com/tutorial-creating-and-managing-a-node-js-server-on-aws-part-1-d67367ac5171
- * 2. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms
- * 3. https://www.hacksparrow.com/form-handling-processing-in-express-js.html
  */
 
-// Import required packages
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
 const WikiData = require('./wikiData');
 
-// Setup simple routing
-app.get('/', (req, res) => {
-  //WikiData.getForwardLinks('Computer_science', 10, result => res.send(JSON.stringify(result)));
-  WikiData.getDescription('Computer_science', result => res.send(JSON.stringify(result)));
+app.get('/index.htm', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.htm" );
+})
+
+app.use(express.static(__dirname + '/css'));
+
+app.use(express.static(__dirname));
+
+app.get('/wikinetwork.htm', function (req, res) {
+   res.sendFile( __dirname + "/" + "wikinetwork.htm" );
+})
+
+app.get('/process_get', function (req, res) {
+   // Prepare output in JSON format
+   response = {
+      first_name:req.query.first_name,
+      last_name:req.query.last_name
+   };
+   console.log(response);
+   res.end(JSON.stringify(response));
+})
+
+app.get('/clear', function (req, res) {
+   
+})
+
+app.get('/', function (req, res) {
+  res.send('Welcome to Wikinetworks');
+  //res.render('index', { title: 'Welcome to Wikinode', message: 'Wikinodes' });
 });
 
-// Listen on port
-let port = 3000;
-app.listen(port, () => console.log(`Server using port ${port}`));
+app.listen(3000, function () {
+  console.log('Listening on port 3000!');
+});
