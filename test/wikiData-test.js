@@ -112,4 +112,21 @@ describe('wikiData', () => {
     });
     expect(res).to.be.true;
   });
+
+  /*
+   * Unit test for making sure getDescription() works as expected.
+   */
+  it ('should return the correct description for the CS page', done => {
+
+    // Description for the Computer Science page on Wikipedia
+    // https://en.wikipedia.org/wiki/Computer_science
+    const EXPECTED = 'study of the theoretical foundations of information and computation';
+
+    let res = WikiData.getDescription('Computer_science', (result) => {
+      expect(result).to.have.a.property('query');
+      expect(result.query.pages[0].description).to.equal(EXPECTED);
+      done();
+    });
+    expect(res).to.be.true;
+  });
 });
