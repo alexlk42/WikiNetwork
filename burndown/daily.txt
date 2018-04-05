@@ -1,3 +1,4 @@
+Day Hours Month Day
 0 54.75 Mar 21
 1 51.75 Mar 22
 2 51.75 Mar 23

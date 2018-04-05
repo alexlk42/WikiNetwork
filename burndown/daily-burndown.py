@@ -9,7 +9,7 @@ if len(sys.argv)==1:
             "day points...\n")
 
 else:
-    dat = np.loadtxt(sys.argv[1],usecols=(0,1))
+    dat = np.loadtxt(sys.argv[1],usecols=(0,1),skiprows=1)
     if len(np.shape(dat))==1: #1 dimension
         print("\nOnly initial data is provided, a chart is not possible\n")
 
