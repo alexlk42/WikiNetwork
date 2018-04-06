@@ -22,6 +22,7 @@ class WikiNode {
     this.branches = 0; //default to 0
     this.forwardLinks = [];
     this.categories = [];
+    this.categoryNum = [];
     this.description = '';
   }
 
@@ -30,23 +31,38 @@ class WikiNode {
     this.branches = num;
   }
 
+  // Update category number
+  setCategoryNum(num){
+    this.categoryNum = num;
+  }
+
   // Find forwardLinks
   findForwardLinks(callback) {
-    WikiData.getForwardLinks(this.title, this.branches, result => {
-      var links = result;
-      links.forEach(link=>{
-	this.forwardLinks.push(new WikiNode(link));
-      });
+
+    if (this.branches==0){ //doesn't ask for links if 0
       callback();
-    });
+
+    }else{ //Create new nodes for each link
+      WikiData.getForwardLinks(this.title, this.branches, result => {
+	var links = result;
+	links.forEach(link=>{
+	  this.forwardLinks.push(new WikiNode(link));
+	});
+	callback();
+      });
+    }
   }
 
   // Find categories
   findCategories(callback){
-    WikiData.getCategories(this.title, result => {
-      this.categories = result;
+    if (this.categoryNum==0){
       callback();
-    });
+    }else{
+      WikiData.getCategories(this.title, this.categoryNum, result => {
+	this.categories = result;
+	callback();
+      });
+    }
   }
 
   // Find description
@@ -100,7 +116,6 @@ class WikiNode {
 	linksArr.push(JSON.stringify({
 	  source: node.title,
 	  target: link.title,
-	  value: 1
 	}));
       });
     });
