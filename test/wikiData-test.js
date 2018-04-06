@@ -28,7 +28,9 @@ describe('wikiData', () => {
    */
   it('should return 1 link', done => {
     let res = WikiData.getForwardLinks('Computer_science', 1, (result) => {
-      expect(result.length).to.equal(1);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(1);
       done();
     });
     expect(res).to.be.true;
@@ -40,7 +42,9 @@ describe('wikiData', () => {
    */
   it('should return 5 links', done => {
     let res = WikiData.getForwardLinks('Computer_science', 5, (result) => {
-      expect(result.length).to.equal(5);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(5);
       done();
     });
     expect(res).to.be.true;
@@ -53,7 +57,9 @@ describe('wikiData', () => {
    */
   it('should return 500 links', done => {
     let res = WikiData.getForwardLinks('Computer_science', 600, (result) => {
-      expect(result.length).to.equal(500);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(500);
       done();
     });
     expect(res).to.be.true;
@@ -76,7 +82,9 @@ describe('wikiData', () => {
    */
   it('should return 1 category', done => {
     let res = WikiData.getCategories('Computer_science', 1, (result) => {
-      expect(result.length).to.equal(1);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(1);
       done();
     });
     expect(res).to.be.true;
@@ -88,7 +96,9 @@ describe('wikiData', () => {
    */
   it('should return 5 categories', done => {
     let res = WikiData.getCategories('Computer_science', 5, (result) => {
-      expect(result.length).to.equal(5);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(5);
       done();
     });
     expect(res).to.be.true;
@@ -101,7 +111,9 @@ describe('wikiData', () => {
    */
   it('should return 50 categories', done => {
     let res = WikiData.getCategories('Elon Musk', 60, (result) => {
-      expect(result.length).to.equal(50);
+      expect(result).to.be.a('array');
+      result.forEach(item => expect(item).to.be.a('string'));
+      expect(result).to.have.lengthOf(50);
       done();
     });
     expect(res).to.be.true;
