@@ -6,3 +6,4 @@ Day Hours Month Day
 4 51.75 Apr 03
 5 50.75 Apr 04
 6 33    Apr 05
+7 33    Apr 06
