@@ -33,7 +33,10 @@ class WikiNode {
   // Find forwardLinks
   findForwardLinks(callback) {
     WikiData.getForwardLinks(this.title, this.branches, result => {
-      this.forwardLinks = result;
+      var links = result;
+      links.forEach(link=>{
+	this.forwardLinks.push(new WikiNode(link));
+      });
       callback();
     });
   }
@@ -65,5 +68,57 @@ class WikiNode {
     };
 
   }
+
+  /*
+   * The following static methods are used to
+   * generate an appropriate JSON file from an array
+   * of nodes.
+   */
+
+  //Creates the first half of the JSON including
+  //all titles
+  static createIDArr(nodeArray,callback){
+    let idArr = [];
+
+    nodeArray.forEach(node=>{
+      idArr.push(JSON.stringify({id: node.title}));
+      var links = node.forwardLinks;
+      links.forEach(link=>{
+	idArr.push(JSON.stringify({id: link.title}));
+      });
+    });
+    callback(idArr);
+  }
+
+  //Creates the second half of the JSON including
+  //all links
+  static createLinksArr(nodeArray,callback){
+    let linksArr = [];
+    nodeArray.forEach(node=>{
+      var links = node.forwardLinks;
+      links.forEach(link=>{
+	linksArr.push(JSON.stringify({
+	  source: node.title,
+	  target: link.title,
+	  value: 1
+	}));
+      });
+    });
+    callback(linksArr);
+  }
+
+  //combines the first and second half of the JSON
+  static nodeArrayPrint(nodeArray,callback){
+    var fullString={};
+    WikiNode.createIDArr(nodeArray, res=>{
+      fullString['nodes']=res;
+    });
+    WikiNode.createLinksArr(nodeArray, res=>{
+      fullString['links']=res;
+    });
+
+    callback(fullString);
+  }
 }
+
 module.exports = WikiNode;
