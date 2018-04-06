@@ -1345,7 +1345,6 @@
     "links":[
         {
             "source":"Software_engineering",
-<<<<<<< HEAD
             "target":"Grady_Booch",
             "value":1
         },
@@ -3573,7 +3572,7 @@
             "source":"Software_engineering",
             "target":"ISO_9001",
             "value":1
-=======
+
             "target":"Grady_Booch"
         },
         {
@@ -5355,7 +5354,7 @@
         {
             "source":"Software_engineering",
             "target":"ISO_9001"
->>>>>>> develop
+
         }
     ]
 }
