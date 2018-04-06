@@ -22,7 +22,7 @@ d3.json("example.json", function(error, graph) {
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", function(d) { return 1; });
 
   // Add the nodes to the graph `g`
   var node = svg.append("g")

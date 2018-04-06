@@ -1345,2233 +1345,1787 @@
     "links":[
         {
             "source":"Software_engineering",
-            "target":"Grady_Booch",
-            "value":1
+            "target":"Grady_Booch"
         },
         {
             "source":"Software_engineering",
-            "target":"Microwave_engineering",
-            "value":1
+            "target":"Microwave_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Operations_research",
-            "value":1
+            "target":"Operations_research"
         },
         {
             "source":"Software_engineering",
-            "target":"Structural_engineering",
-            "value":1
+            "target":"Structural_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Fortran",
-            "value":1
+            "target":"Fortran"
         },
         {
             "source":"Software_engineering",
-            "target":"Trygve_Reenskaug",
-            "value":1
+            "target":"Trygve_Reenskaug"
         },
         {
             "source":"Software_engineering",
-            "target":"Dynamic_systems_development_method",
-            "value":1
+            "target":"Dynamic_systems_development_method"
         },
         {
             "source":"Software_engineering",
-            "target":"Green_computing",
-            "value":1
+            "target":"Green_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Tom_DeMarco",
-            "value":1
+            "target":"Tom_DeMarco"
         },
         {
             "source":"Software_engineering",
-            "target":"Integrated_development_environment",
-            "value":1
+            "target":"Integrated_development_environment"
         },
         {
             "source":"Software_engineering",
-            "target":"Very-large-scale_integration",
-            "value":1
+            "target":"Very-large-scale_integration"
         },
         {
             "source":"Software_engineering",
-            "target":"Multimedia_database",
-            "value":1
+            "target":"Multimedia_database"
         },
         {
             "source":"Software_engineering",
-            "target":"V-Model",
-            "value":1
+            "target":"V-Model"
         },
         {
             "source":"Software_engineering",
-            "target":"Networking_hardware",
-            "value":1
+            "target":"Networking_hardware"
         },
         {
             "source":"Software_engineering",
-            "target":"Mathematical_optimization",
-            "value":1
+            "target":"Mathematical_optimization"
         },
         {
             "source":"Software_engineering",
-            "target":"Derek_Hitchins",
-            "value":1
+            "target":"Derek_Hitchins"
         },
         {
             "source":"Software_engineering",
-            "target":"Tony_Hoare",
-            "value":1
+            "target":"Tony_Hoare"
         },
         {
             "source":"Software_engineering",
-            "target":"Application_release_automation",
-            "value":1
+            "target":"Application_release_automation"
         },
         {
             "source":"Software_engineering",
-            "target":"Agile_software_development",
-            "value":1
+            "target":"Agile_software_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Graphical_user_interface_builder",
-            "value":1
+            "target":"Graphical_user_interface_builder"
         },
         {
             "source":"Software_engineering",
-            "target":"Mechanical_engineering",
-            "value":1
+            "target":"Mechanical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"David_Parnas",
-            "value":1
+            "target":"David_Parnas"
         },
         {
             "source":"Software_engineering",
-            "target":"Military_service",
-            "value":1
+            "target":"Military_service"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_development_methodology",
-            "value":1
+            "target":"Software_development_methodology"
         },
         {
             "source":"Software_engineering",
-            "target":"Rendering_(computer_graphics)",
-            "value":1
+            "target":"Rendering_(computer_graphics)"
         },
         {
             "source":"Software_engineering",
-            "target":"Supervised_learning",
-            "value":1
+            "target":"Supervised_learning"
         },
         {
             "source":"Software_engineering",
-            "target":"Joseph_Francis_Shea",
-            "value":1
+            "target":"Joseph_Francis_Shea"
         },
         {
             "source":"Software_engineering",
-            "target":"Security_service_(telecommunication)",
-            "value":1
+            "target":"Security_service_(telecommunication)"
         },
         {
             "source":"Software_engineering",
-            "target":"COBOL",
-            "value":1
+            "target":"COBOL"
         },
         {
             "source":"Software_engineering",
-            "target":"Functional_specification",
-            "value":1
+            "target":"Functional_specification"
         },
         {
             "source":"Software_engineering",
-            "target":"Optical_engineering",
-            "value":1
+            "target":"Optical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Enterprise_Unified_Process",
-            "value":1
+            "target":"Enterprise_Unified_Process"
         },
         {
             "source":"Software_engineering",
-            "target":"Mathematical_analysis",
-            "value":1
+            "target":"Mathematical_analysis"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_vision",
-            "value":1
+            "target":"Computer_vision"
         },
         {
             "source":"Software_engineering",
-            "target":"Aspect-oriented_software_development",
-            "value":1
+            "target":"Aspect-oriented_software_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Privacy_engineering",
-            "value":1
+            "target":"Privacy_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"BABOK",
-            "value":1
+            "target":"BABOK"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_security",
-            "value":1
+            "target":"Network_security"
         },
         {
             "source":"Software_engineering",
-            "target":"Test-driven_development",
-            "value":1
+            "target":"Test-driven_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Arthur_David_Hall_III",
-            "value":1
+            "target":"Arthur_David_Hall_III"
         },
         {
             "source":"Software_engineering",
-            "target":"Photo_manipulation",
-            "value":1
+            "target":"Photo_manipulation"
         },
         {
             "source":"Software_engineering",
-            "target":"Word_processor",
-            "value":1
+            "target":"Word_processor"
         },
         {
             "source":"Software_engineering",
-            "target":"Mixed_reality",
-            "value":1
+            "target":"Mixed_reality"
         },
         {
             "source":"Software_engineering",
-            "target":"IT_security",
-            "value":1
+            "target":"IT_security"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_technology",
-            "value":1
+            "target":"Information_technology"
         },
         {
             "source":"Software_engineering",
-            "target":"Automated_planning_and_scheduling",
-            "value":1
+            "target":"Automated_planning_and_scheduling"
         },
         {
             "source":"Software_engineering",
-            "target":"Alan_Kay",
-            "value":1
+            "target":"Alan_Kay"
         },
         {
             "source":"Software_engineering",
-            "target":"Object_model",
-            "value":1
+            "target":"Object_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Randomized_algorithm",
-            "value":1
+            "target":"Randomized_algorithm"
         },
         {
             "source":"Software_engineering",
-            "target":"Foreign_Worker_Visa",
-            "value":1
+            "target":"Foreign_Worker_Visa"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_programming",
-            "value":1
+            "target":"Computer_programming"
         },
         {
             "source":"Software_engineering",
-            "target":"Chemical_reaction_engineering",
-            "value":1
+            "target":"Chemical_reaction_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Cross-validation_(statistics)",
-            "value":1
+            "target":"Cross-validation_(statistics)"
         },
         {
             "source":"Software_engineering",
-            "target":"Integrated_Authority_File",
-            "value":1
+            "target":"Integrated_Authority_File"
         },
         {
             "source":"Software_engineering",
-            "target":"Team_software_process",
-            "value":1
+            "target":"Team_software_process"
         },
         {
             "source":"Software_engineering",
-            "target":"Von_Neumann_architecture",
-            "value":1
+            "target":"Von_Neumann_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_documentation",
-            "value":1
+            "target":"Software_documentation"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_theory",
-            "value":1
+            "target":"Information_theory"
         },
         {
             "source":"Software_engineering",
-            "target":"Model_of_computation",
-            "value":1
+            "target":"Model_of_computation"
         },
         {
             "source":"Software_engineering",
-            "target":"Civil_engineering",
-            "value":1
+            "target":"Civil_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Structured_analysis",
-            "value":1
+            "target":"Structured_analysis"
         },
         {
             "source":"Software_engineering",
-            "target":"Power_engineering",
-            "value":1
+            "target":"Power_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Operating_system",
-            "value":1
+            "target":"Operating_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Bernd_Bruegge",
-            "value":1
+            "target":"Bernd_Bruegge"
         },
         {
             "source":"Software_engineering",
-            "target":"Domain-specific_language",
-            "value":1
+            "target":"Domain-specific_language"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_deployment",
-            "value":1
+            "target":"Software_deployment"
         },
         {
             "source":"Software_engineering",
-            "target":"NCEES",
-            "value":1
+            "target":"NCEES"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_model",
-            "value":1
+            "target":"Information_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Virtual_reality",
-            "value":1
+            "target":"Virtual_reality"
         },
         {
             "source":"Software_engineering",
-            "target":"Edsger_Dijkstra",
-            "value":1
+            "target":"Edsger_Dijkstra"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_engineering",
-            "value":1
+            "target":"Computer_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_mechanical_engineering",
-            "value":1
+            "target":"Glossary_of_mechanical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Embedded_system",
-            "value":1
+            "target":"Embedded_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Wolt_Fabrycky",
-            "value":1
+            "target":"Wolt_Fabrycky"
         },
         {
             "source":"Software_engineering",
-            "target":"Thermal_engineering",
-            "value":1
+            "target":"Thermal_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Ceramic_engineering",
-            "value":1
+            "target":"Ceramic_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Acoustical_engineering",
-            "value":1
+            "target":"Acoustical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Multithreading_(computer_architecture)",
-            "value":1
+            "target":"Multithreading_(computer_architecture)"
         },
         {
             "source":"Software_engineering",
-            "target":"Domain-driven_design",
-            "value":1
+            "target":"Domain-driven_design"
         },
         {
             "source":"Software_engineering",
-            "target":"Telecommunications_engineering",
-            "value":1
+            "target":"Telecommunications_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Multiprocessing",
-            "value":1
+            "target":"Multiprocessing"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_science",
-            "value":1
+            "target":"Computer_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_construction",
-            "value":1
+            "target":"Software_construction"
         },
         {
             "source":"Software_engineering",
-            "target":"Ward_Cunningham",
-            "value":1
+            "target":"Ward_Cunningham"
         },
         {
             "source":"Software_engineering",
-            "target":"Library_of_Congress_Control_Number",
-            "value":1
+            "target":"Library_of_Congress_Control_Number"
         },
         {
             "source":"Software_engineering",
-            "target":"Michael_A._Jackson",
-            "value":1
+            "target":"Michael_A._Jackson"
         },
         {
             "source":"Software_engineering",
-            "target":"Cleanroom_software_engineering",
-            "value":1
+            "target":"Cleanroom_software_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Concurrent_computing",
-            "value":1
+            "target":"Concurrent_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Social_software",
-            "value":1
+            "target":"Social_software"
         },
         {
             "source":"Software_engineering",
-            "target":"Visualization_(computer_graphics)",
-            "value":1
+            "target":"Visualization_(computer_graphics)"
         },
         {
             "source":"Software_engineering",
-            "target":"Parallel_computing",
-            "value":1
+            "target":"Parallel_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Kanban_(development)",
-            "value":1
+            "target":"Kanban_(development)"
         },
         {
             "source":"Software_engineering",
-            "target":"Verification_and_validation",
-            "value":1
+            "target":"Verification_and_validation"
         },
         {
             "source":"Software_engineering",
-            "target":"Programming_team",
-            "value":1
+            "target":"Programming_team"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_framework",
-            "value":1
+            "target":"Software_framework"
         },
         {
             "source":"Software_engineering",
-            "target":"Association_for_Computing_Machinery",
-            "value":1
+            "target":"Association_for_Computing_Machinery"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_prototyping",
-            "value":1
+            "target":"Software_prototyping"
         },
         {
             "source":"Software_engineering",
-            "target":"Winston_W._Royce",
-            "value":1
+            "target":"Winston_W._Royce"
         },
         {
             "source":"Software_engineering",
-            "target":"Personal_software_process",
-            "value":1
+            "target":"Personal_software_process"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_Engineering_Institute",
-            "value":1
+            "target":"Software_Engineering_Institute"
         },
         {
             "source":"Software_engineering",
-            "target":"Canadian_Information_Processing_Society",
-            "value":1
+            "target":"Canadian_Information_Processing_Society"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_graphics",
-            "value":1
+            "target":"Computer_graphics"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_maintenance",
-            "value":1
+            "target":"Software_maintenance"
         },
         {
             "source":"Software_engineering",
-            "target":"Mary_Jean_Harrold",
-            "value":1
+            "target":"Mary_Jean_Harrold"
         },
         {
             "source":"Software_engineering",
-            "target":"Biochemical_engineering",
-            "value":1
+            "target":"Biochemical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Intrusion_detection_system",
-            "value":1
+            "target":"Intrusion_detection_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Earth_systems_engineering_and_management",
-            "value":1
+            "target":"Earth_systems_engineering_and_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_crisis",
-            "value":1
+            "target":"Software_crisis"
         },
         {
             "source":"Software_engineering",
-            "target":"Business_process",
-            "value":1
+            "target":"Business_process"
         },
         {
             "source":"Software_engineering",
-            "target":"Danese_Cooper",
-            "value":1
+            "target":"Danese_Cooper"
         },
         {
             "source":"Software_engineering",
-            "target":"PMBOK",
-            "value":1
+            "target":"PMBOK"
         },
         {
             "source":"Software_engineering",
-            "target":"Communications_of_the_ACM",
-            "value":1
+            "target":"Communications_of_the_ACM"
         },
         {
             "source":"Software_engineering",
-            "target":"Printed_circuit_board",
-            "value":1
+            "target":"Printed_circuit_board"
         },
         {
             "source":"Software_engineering",
-            "target":"Requirements",
-            "value":1
+            "target":"Requirements"
         },
         {
             "source":"Software_engineering",
-            "target":"Ubiquitous_computing",
-            "value":1
+            "target":"Ubiquitous_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Main_Page",
-            "value":1
+            "target":"Main_Page"
         },
         {
             "source":"Software_engineering",
-            "target":"Design_review",
-            "value":1
+            "target":"Design_review"
         },
         {
             "source":"Software_engineering",
-            "target":"Philosophy_of_artificial_intelligence",
-            "value":1
+            "target":"Philosophy_of_artificial_intelligence"
         },
         {
             "source":"Software_engineering",
-            "target":"Systems_development_life_cycle",
-            "value":1
+            "target":"Systems_development_life_cycle"
         },
         {
             "source":"Software_engineering",
-            "target":"Marine_engineering",
-            "value":1
+            "target":"Marine_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Biblioteca_Nacional_de_Espa%C3%B1a",
-            "value":1
+            "target":"Biblioteca_Nacional_de_Espa%C3%B1a"
         },
         {
             "source":"Software_engineering",
-            "target":"Electronic_voting",
-            "value":1
+            "target":"Electronic_voting"
         },
         {
             "source":"Software_engineering",
-            "target":"Geotechnical_engineering",
-            "value":1
+            "target":"Geotechnical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Industrial_engineering",
-            "value":1
+            "target":"Industrial_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Developed_world",
-            "value":1
+            "target":"Developed_world"
         },
         {
             "source":"Software_engineering",
-            "target":"Middleware_analyst",
-            "value":1
+            "target":"Middleware_analyst"
         },
         {
             "source":"Software_engineering",
-            "target":"System_integration",
-            "value":1
+            "target":"System_integration"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_engineering_professionalism",
-            "value":1
+            "target":"Software_engineering_professionalism"
         },
         {
             "source":"Software_engineering",
-            "target":"Debugger",
-            "value":1
+            "target":"Debugger"
         },
         {
             "source":"Software_engineering",
-            "target":"Radio-frequency_engineering",
-            "value":1
+            "target":"Radio-frequency_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Data_mining",
-            "value":1
+            "target":"Data_mining"
         },
         {
             "source":"Software_engineering",
-            "target":"Ivar_Jacobson",
-            "value":1
+            "target":"Ivar_Jacobson"
         },
         {
             "source":"Software_engineering",
-            "target":"Process_control",
-            "value":1
+            "target":"Process_control"
         },
         {
             "source":"Software_engineering",
-            "target":"Requirements_engineering",
-            "value":1
+            "target":"Requirements_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Professional_Engineer",
-            "value":1
+            "target":"Professional_Engineer"
         },
         {
             "source":"Software_engineering",
-            "target":"Statistics",
-            "value":1
+            "target":"Statistics"
         },
         {
             "source":"Software_engineering",
-            "target":"Build_automation",
-            "value":1
+            "target":"Build_automation"
         },
         {
             "source":"Software_engineering",
-            "target":"Radhika_Nagpal",
-            "value":1
+            "target":"Radhika_Nagpal"
         },
         {
             "source":"Software_engineering",
-            "target":"ACM_Computing_Classification_System",
-            "value":1
+            "target":"ACM_Computing_Classification_System"
         },
         {
             "source":"Software_engineering",
-            "target":"Engineering_mechanics",
-            "value":1
+            "target":"Engineering_mechanics"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_biology",
-            "value":1
+            "target":"Computational_biology"
         },
         {
             "source":"Software_engineering",
-            "target":"Fire_protection_engineering",
-            "value":1
+            "target":"Fire_protection_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Solid_modeling",
-            "value":1
+            "target":"Solid_modeling"
         },
         {
             "source":"Software_engineering",
-            "target":"Roger_S._Pressman",
-            "value":1
+            "target":"Roger_S._Pressman"
         },
         {
             "source":"Software_engineering",
-            "target":"Extreme_programming",
-            "value":1
+            "target":"Extreme_programming"
         },
         {
             "source":"Software_engineering",
-            "target":"Work_breakdown_structure",
-            "value":1
+            "target":"Work_breakdown_structure"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_mathematics",
-            "value":1
+            "target":"Computational_mathematics"
         },
         {
             "source":"Software_engineering",
-            "target":"Kathleen_Carley",
-            "value":1
+            "target":"Kathleen_Carley"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_hardware",
-            "value":1
+            "target":"Computer_hardware"
         },
         {
             "source":"Software_engineering",
-            "target":"Systems_engineering",
-            "value":1
+            "target":"Systems_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_security_compromised_by_hardware_failure",
-            "value":1
+            "target":"Computer_security_compromised_by_hardware_failure"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_data_storage",
-            "value":1
+            "target":"Computer_data_storage"
         },
         {
             "source":"Software_engineering",
-            "target":"Electronic_engineering",
-            "value":1
+            "target":"Electronic_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Waterfall_model",
-            "value":1
+            "target":"Waterfall_model"
         },
         {
             "source":"Software_engineering",
-            "target":"ISO/IEC_JTC_1/SC_7",
-            "value":1
+            "target":"ISO/IEC_JTC_1/SC_7"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_configuration_management",
-            "value":1
+            "target":"Software_configuration_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Middleware",
-            "value":1
+            "target":"Middleware"
         },
         {
             "source":"Software_engineering",
-            "target":"Enterprise_information_system",
-            "value":1
+            "target":"Enterprise_information_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Outline_of_software_engineering",
-            "value":1
+            "target":"Outline_of_software_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Bachelor_of_Science_in_Information_Technology",
-            "value":1
+            "target":"Bachelor_of_Science_in_Information_Technology"
         },
         {
             "source":"Software_engineering",
-            "target":"Concurrency_(computer_science)",
-            "value":1
+            "target":"Concurrency_(computer_science)"
         },
         {
             "source":"Software_engineering",
-            "target":"Simon_Ramo",
-            "value":1
+            "target":"Simon_Ramo"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_physics",
-            "value":1
+            "target":"Computational_physics"
         },
         {
             "source":"Software_engineering",
-            "target":"Microsoft_Certified_Professional",
-            "value":1
+            "target":"Microsoft_Certified_Professional"
         },
         {
             "source":"Software_engineering",
-            "target":"Brian_Randell",
-            "value":1
+            "target":"Brian_Randell"
         },
         {
             "source":"Software_engineering",
-            "target":"Bureau_of_Labor_Statistics",
-            "value":1
+            "target":"Bureau_of_Labor_Statistics"
         },
         {
             "source":"Software_engineering",
-            "target":"Library_(computing)",
-            "value":1
+            "target":"Library_(computing)"
         },
         {
             "source":"Software_engineering",
-            "target":"Formal_methods",
-            "value":1
+            "target":"Formal_methods"
         },
         {
             "source":"Software_engineering",
-            "target":"Digital_object_identifier",
-            "value":1
+            "target":"Digital_object_identifier"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_architecture",
-            "value":1
+            "target":"Computer_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_protocol",
-            "value":1
+            "target":"Network_protocol"
         },
         {
             "source":"Software_engineering",
-            "target":"Edward_Yourdon",
-            "value":1
+            "target":"Edward_Yourdon"
         },
         {
             "source":"Software_engineering",
-            "target":"Martin_Fowler",
-            "value":1
+            "target":"Martin_Fowler"
         },
         {
             "source":"Software_engineering",
-            "target":"IDEF",
-            "value":1
+            "target":"IDEF"
         },
         {
             "source":"Software_engineering",
-            "target":"Professional_certification_(computer_technology)",
-            "value":1
+            "target":"Professional_certification_(computer_technology)"
         },
         {
             "source":"Software_engineering",
-            "target":"ISO",
-            "value":1
+            "target":"ISO"
         },
         {
             "source":"Software_engineering",
-            "target":"European_Engineer",
-            "value":1
+            "target":"European_Engineer"
         },
         {
             "source":"Software_engineering",
-            "target":"Mathematical_software",
-            "value":1
+            "target":"Mathematical_software"
         },
         {
             "source":"Software_engineering",
-            "target":"Watts_Humphrey",
-            "value":1
+            "target":"Watts_Humphrey"
         },
         {
             "source":"Software_engineering",
-            "target":"Continuous_Integration",
-            "value":1
+            "target":"Continuous_Integration"
         },
         {
             "source":"Software_engineering",
-            "target":"Performance_engineering",
-            "value":1
+            "target":"Performance_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"SEMAT",
-            "value":1
+            "target":"SEMAT"
         },
         {
             "source":"Software_engineering",
-            "target":"Unified_Process",
-            "value":1
+            "target":"Unified_Process"
         },
         {
             "source":"Software_engineering",
-            "target":"Quality_management",
-            "value":1
+            "target":"Quality_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Knowledge_representation_and_reasoning",
-            "value":1
+            "target":"Knowledge_representation_and_reasoning"
         },
         {
             "source":"Software_engineering",
-            "target":"International_Electrotechnical_Commission",
-            "value":1
+            "target":"International_Electrotechnical_Commission"
         },
         {
             "source":"Software_engineering",
-            "target":"Video_game",
-            "value":1
+            "target":"Video_game"
         },
         {
             "source":"Software_engineering",
-            "target":"Ian_Sommerville_(academic)",
-            "value":1
+            "target":"Ian_Sommerville_(academic)"
         },
         {
             "source":"Software_engineering",
-            "target":"Pair_Programming",
-            "value":1
+            "target":"Pair_Programming"
         },
         {
             "source":"Software_engineering",
-            "target":"Analysis_of_algorithms",
-            "value":1
+            "target":"Analysis_of_algorithms"
         },
         {
             "source":"Software_engineering",
-            "target":"Capability_Maturity_Model_Integration",
-            "value":1
+            "target":"Capability_Maturity_Model_Integration"
         },
         {
             "source":"Software_engineering",
-            "target":"Elaine_Weyuker",
-            "value":1
+            "target":"Elaine_Weyuker"
         },
         {
             "source":"Software_engineering",
-            "target":"Engineer",
-            "value":1
+            "target":"Engineer"
         },
         {
             "source":"Software_engineering",
-            "target":"CMMI",
-            "value":1
+            "target":"CMMI"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_testing",
-            "value":1
+            "target":"Software_testing"
         },
         {
             "source":"Software_engineering",
-            "target":"John_N._Warfield",
-            "value":1
+            "target":"John_N._Warfield"
         },
         {
             "source":"Software_engineering",
-            "target":"Spiral_model",
-            "value":1
+            "target":"Spiral_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Unified_Modeling_Language",
-            "value":1
+            "target":"Unified_Modeling_Language"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_scheduler",
-            "value":1
+            "target":"Network_scheduler"
         },
         {
             "source":"Software_engineering",
-            "target":"Compiler",
-            "value":1
+            "target":"Compiler"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_project_management",
-            "value":1
+            "target":"Software_project_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Photonics",
-            "value":1
+            "target":"Photonics"
         },
         {
             "source":"Software_engineering",
-            "target":"Continuous_Delivery",
-            "value":1
+            "target":"Continuous_Delivery"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_engineer",
-            "value":1
+            "target":"Software_engineer"
         },
         {
             "source":"Software_engineering",
-            "target":"Railway_engineering",
-            "value":1
+            "target":"Railway_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Materials_science",
-            "value":1
+            "target":"Materials_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_electrical_and_electronics_engineering",
-            "value":1
+            "target":"Glossary_of_electrical_and_electronics_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Biomedical_engineering",
-            "value":1
+            "target":"Biomedical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Human%E2%80%93computer_interaction",
-            "value":1
+            "target":"Human%E2%80%93computer_interaction"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_network",
-            "value":1
+            "target":"Computer_network"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_Technology_Architect_Certification",
-            "value":1
+            "target":"Information_Technology_Architect_Certification"
         },
         {
             "source":"Software_engineering",
-            "target":"Manuela_M._Veloso",
-            "value":1
+            "target":"Manuela_M._Veloso"
         },
         {
             "source":"Software_engineering",
-            "target":"Architectural_engineering",
-            "value":1
+            "target":"Architectural_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Open-source_software",
-            "value":1
+            "target":"Open-source_software"
         },
         {
             "source":"Software_engineering",
-            "target":"Kent_Beck",
-            "value":1
+            "target":"Kent_Beck"
         },
         {
             "source":"Software_engineering",
-            "target":"Edsger_W._Dijkstra",
-            "value":1
+            "target":"Edsger_W._Dijkstra"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossaries",
-            "value":1
+            "target":"Glossaries"
         },
         {
             "source":"Software_engineering",
-            "target":"Victor_Basili",
-            "value":1
+            "target":"Victor_Basili"
         },
         {
             "source":"Software_engineering",
-            "target":"Lois_Haibt",
-            "value":1
+            "target":"Lois_Haibt"
         },
         {
             "source":"Software_engineering",
-            "target":"Data_modeling",
-            "value":1
+            "target":"Data_modeling"
         },
         {
             "source":"Software_engineering",
-            "target":"Integrated_circuit",
-            "value":1
+            "target":"Integrated_circuit"
         },
         {
             "source":"Software_engineering",
-            "target":"Automata_theory",
-            "value":1
+            "target":"Automata_theory"
         },
         {
             "source":"Software_engineering",
-            "target":"Dependability",
-            "value":1
+            "target":"Dependability"
         },
         {
             "source":"Software_engineering",
-            "target":"Chemical_engineering",
-            "value":1
+            "target":"Chemical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Iterative_and_incremental_development",
-            "value":1
+            "target":"Iterative_and_incremental_development"
         },
         {
             "source":"Software_engineering",
-            "target":"British_Computer_Society",
-            "value":1
+            "target":"British_Computer_Society"
         },
         {
             "source":"Software_engineering",
-            "target":"Incremental_build_model",
-            "value":1
+            "target":"Incremental_build_model"
         },
         {
             "source":"Software_engineering",
-            "target":"ISO/IEC_15504",
-            "value":1
+            "target":"ISO/IEC_15504"
         },
         {
             "source":"Software_engineering",
-            "target":"Application_security",
-            "value":1
+            "target":"Application_security"
         },
         {
             "source":"Software_engineering",
-            "target":"Certified_Software_Development_Professional",
-            "value":1
+            "target":"Certified_Software_Development_Professional"
         },
         {
             "source":"Software_engineering",
-            "target":"Computing_platform",
-            "value":1
+            "target":"Computing_platform"
         },
         {
             "source":"Software_engineering",
-            "target":"Margaret_Hamilton_(scientist)",
-            "value":1
+            "target":"Margaret_Hamilton_(scientist)"
         },
         {
             "source":"Software_engineering",
-            "target":"Interpreter_(computing)",
-            "value":1
+            "target":"Interpreter_(computing)"
         },
         {
             "source":"Software_engineering",
-            "target":"United_States",
-            "value":1
+            "target":"United_States"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_complexity_theory",
-            "value":1
+            "target":"Computational_complexity_theory"
         },
         {
             "source":"Software_engineering",
-            "target":"Engineering_mathematics",
-            "value":1
+            "target":"Engineering_mathematics"
         },
         {
             "source":"Software_engineering",
-            "target":"View_model",
-            "value":1
+            "target":"View_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_engineering",
-            "value":1
+            "target":"Glossary_of_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Programming_language",
-            "value":1
+            "target":"Programming_language"
         },
         {
             "source":"Software_engineering",
-            "target":"Scrum_(software_development)",
-            "value":1
+            "target":"Scrum_(software_development)"
         },
         {
             "source":"Software_engineering",
-            "target":"Pankaj_Jalote",
-            "value":1
+            "target":"Pankaj_Jalote"
         },
         {
             "source":"Software_engineering",
-            "target":"Bachelor_of_Software_Engineering",
-            "value":1
+            "target":"Bachelor_of_Software_Engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Discrete_mathematics",
-            "value":1
+            "target":"Discrete_mathematics"
         },
         {
             "source":"Software_engineering",
-            "target":"UML_tools",
-            "value":1
+            "target":"UML_tools"
         },
         {
             "source":"Software_engineering",
-            "target":"Ruzena_Bajcsy",
-            "value":1
+            "target":"Ruzena_Bajcsy"
         },
         {
             "source":"Software_engineering",
-            "target":"Biblioth%C3%A8que_nationale_de_France",
-            "value":1
+            "target":"Biblioth%C3%A8que_nationale_de_France"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_geometry",
-            "value":1
+            "target":"Computational_geometry"
         },
         {
             "source":"Software_engineering",
-            "target":"Stephen_J._Mellor",
-            "value":1
+            "target":"Stephen_J._Mellor"
         },
         {
             "source":"Software_engineering",
-            "target":"Enterprise_systems_engineering",
-            "value":1
+            "target":"Enterprise_systems_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Offshore_outsourcing",
-            "value":1
+            "target":"Offshore_outsourcing"
         },
         {
             "source":"Software_engineering",
-            "target":"Carpal_tunnel_syndrome",
-            "value":1
+            "target":"Carpal_tunnel_syndrome"
         },
         {
             "source":"Software_engineering",
-            "target":"Metallurgy",
-            "value":1
+            "target":"Metallurgy"
         },
         {
             "source":"Software_engineering",
-            "target":"Electronic_publishing",
-            "value":1
+            "target":"Electronic_publishing"
         },
         {
             "source":"Software_engineering",
-            "target":"Model-driven_development",
-            "value":1
+            "target":"Model-driven_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_system",
-            "value":1
+            "target":"Information_system"
         },
         {
             "source":"Software_engineering",
-            "target":"V-Model_(software_development)",
-            "value":1
+            "target":"V-Model_(software_development)"
         },
         {
             "source":"Software_engineering",
-            "target":"Executable_UML",
-            "value":1
+            "target":"Executable_UML"
         },
         {
             "source":"Software_engineering",
-            "target":"Molecular_engineering",
-            "value":1
+            "target":"Molecular_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Theory_of_computation",
-            "value":1
+            "target":"Theory_of_computation"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_aerospace_engineering",
-            "value":1
+            "target":"Glossary_of_aerospace_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Nanotechnology",
-            "value":1
+            "target":"Nanotechnology"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_design",
-            "value":1
+            "target":"Software_design"
         },
         {
             "source":"Software_engineering",
-            "target":"Adaptive_software_development",
-            "value":1
+            "target":"Adaptive_software_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Friedrich_L._Bauer",
-            "value":1
+            "target":"Friedrich_L._Bauer"
         },
         {
             "source":"Software_engineering",
-            "target":"Decision_support_system",
-            "value":1
+            "target":"Decision_support_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_developer",
-            "value":1
+            "target":"Software_developer"
         },
         {
             "source":"Software_engineering",
-            "target":"Control_theory",
-            "value":1
+            "target":"Control_theory"
         },
         {
             "source":"Software_engineering",
-            "target":"Probability",
-            "value":1
+            "target":"Probability"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_requirements",
-            "value":1
+            "target":"Software_requirements"
         },
         {
             "source":"Software_engineering",
-            "target":"Reinforcement_learning",
-            "value":1
+            "target":"Reinforcement_learning"
         },
         {
             "source":"Software_engineering",
-            "target":"Ontology_(information_science)",
-            "value":1
+            "target":"Ontology_(information_science)"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer",
-            "value":1
+            "target":"Computer"
         },
         {
             "source":"Software_engineering",
-            "target":"James_S._Albus",
-            "value":1
+            "target":"James_S._Albus"
         },
         {
             "source":"Software_engineering",
-            "target":"James_Rumbaugh",
-            "value":1
+            "target":"James_Rumbaugh"
         },
         {
             "source":"Software_engineering",
-            "target":"Hydraulic_engineering",
-            "value":1
+            "target":"Hydraulic_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Niklaus_Wirth",
-            "value":1
+            "target":"Niklaus_Wirth"
         },
         {
             "source":"Software_engineering",
-            "target":"Educator",
-            "value":1
+            "target":"Educator"
         },
         {
             "source":"Software_engineering",
-            "target":"Algorithm_design",
-            "value":1
+            "target":"Algorithm_design"
         },
         {
             "source":"Software_engineering",
-            "target":"Management_science",
-            "value":1
+            "target":"Management_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_retrieval",
-            "value":1
+            "target":"Information_retrieval"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_development_process",
-            "value":1
+            "target":"Software_development_process"
         },
         {
             "source":"Software_engineering",
-            "target":"Control_engineering",
-            "value":1
+            "target":"Control_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_performance",
-            "value":1
+            "target":"Network_performance"
         },
         {
             "source":"Software_engineering",
-            "target":"Stand-up_meeting",
-            "value":1
+            "target":"Stand-up_meeting"
         },
         {
             "source":"Software_engineering",
-            "target":"Natural_language_processing",
-            "value":1
+            "target":"Natural_language_processing"
         },
         {
             "source":"Software_engineering",
-            "target":"Universal_Systems_Language",
-            "value":1
+            "target":"Universal_Systems_Language"
         },
         {
             "source":"Software_engineering",
-            "target":"National_Diet_Library",
-            "value":1
+            "target":"National_Diet_Library"
         },
         {
             "source":"Software_engineering",
-            "target":"Military_engineering",
-            "value":1
+            "target":"Military_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_verification_and_validation",
-            "value":1
+            "target":"Software_verification_and_validation"
         },
         {
             "source":"Software_engineering",
-            "target":"Educational_technology",
-            "value":1
+            "target":"Educational_technology"
         },
         {
             "source":"Software_engineering",
-            "target":"Robert_E._Machol",
-            "value":1
+            "target":"Robert_E._Machol"
         },
         {
             "source":"Software_engineering",
-            "target":"Software",
-            "value":1
+            "target":"Software"
         },
         {
             "source":"Software_engineering",
-            "target":"Debugging",
-            "value":1
+            "target":"Debugging"
         },
         {
             "source":"Software_engineering",
-            "target":"Delores_M._Etter",
-            "value":1
+            "target":"Delores_M._Etter"
         },
         {
             "source":"Software_engineering",
-            "target":"List_of_engineering_branches",
-            "value":1
+            "target":"List_of_engineering_branches"
         },
         {
             "source":"Software_engineering",
-            "target":"Harold_Chestnut",
-            "value":1
+            "target":"Harold_Chestnut"
         },
         {
             "source":"Software_engineering",
-            "target":"Interdisciplinarity",
-            "value":1
+            "target":"Interdisciplinarity"
         },
         {
             "source":"Software_engineering",
-            "target":"Security_engineering",
-            "value":1
+            "target":"Security_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_accessibility",
-            "value":1
+            "target":"Computer_accessibility"
         },
         {
             "source":"Software_engineering",
-            "target":"Risk_management",
-            "value":1
+            "target":"Risk_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_craftsmanship",
-            "value":1
+            "target":"Software_craftsmanship"
         },
         {
             "source":"Software_engineering",
-            "target":"Systems_modeling",
-            "value":1
+            "target":"Systems_modeling"
         },
         {
             "source":"Software_engineering",
-            "target":"Social_computing",
-            "value":1
+            "target":"Social_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Rapid_application_development",
-            "value":1
+            "target":"Rapid_application_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Peter_Chen",
-            "value":1
+            "target":"Peter_Chen"
         },
         {
             "source":"Software_engineering",
-            "target":"Peri_Tarr",
-            "value":1
+            "target":"Peri_Tarr"
         },
         {
             "source":"Software_engineering",
-            "target":"Barry_Boehm",
-            "value":1
+            "target":"Barry_Boehm"
         },
         {
             "source":"Software_engineering",
-            "target":"IEEE_Computer_Society",
-            "value":1
+            "target":"IEEE_Computer_Society"
         },
         {
             "source":"Software_engineering",
-            "target":"IEEE",
-            "value":1
+            "target":"IEEE"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_archaeology",
-            "value":1
+            "target":"Software_archaeology"
         },
         {
             "source":"Software_engineering",
-            "target":"Lean_software_development",
-            "value":1
+            "target":"Lean_software_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Profiling_(computer_programming)",
-            "value":1
+            "target":"Profiling_(computer_programming)"
         },
         {
             "source":"Software_engineering",
-            "target":"Extreme_programming_practices#Collective_code_ownership",
-            "value":1
+            "target":"Extreme_programming_practices#Collective_code_ownership"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_hiding",
-            "value":1
+            "target":"Information_hiding"
         },
         {
             "source":"Software_engineering",
-            "target":"Grace_Hopper",
-            "value":1
+            "target":"Grace_Hopper"
         },
         {
             "source":"Software_engineering",
-            "target":"Integration_testing",
-            "value":1
+            "target":"Integration_testing"
         },
         {
             "source":"Software_engineering",
-            "target":"Adele_Goldstine",
-            "value":1
+            "target":"Adele_Goldstine"
         },
         {
             "source":"Software_engineering",
-            "target":"Geographic_information_system",
-            "value":1
+            "target":"Geographic_information_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_social_science",
-            "value":1
+            "target":"Computational_social_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Enterprise_architecture",
-            "value":1
+            "target":"Enterprise_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"Artificial_intelligence",
-            "value":1
+            "target":"Artificial_intelligence"
         },
         {
             "source":"Software_engineering",
-            "target":"Virtual_machine",
-            "value":1
+            "target":"Virtual_machine"
         },
         {
             "source":"Software_engineering",
-            "target":"Service-oriented_architecture",
-            "value":1
+            "target":"Service-oriented_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"Peripheral",
-            "value":1
+            "target":"Peripheral"
         },
         {
             "source":"Software_engineering",
-            "target":"Modeling_language",
-            "value":1
+            "target":"Modeling_language"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_architecture",
-            "value":1
+            "target":"Network_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"International_Standard_Book_Number",
-            "value":1
+            "target":"International_Standard_Book_Number"
         },
         {
             "source":"Software_engineering",
-            "target":"Unsupervised_learning",
-            "value":1
+            "target":"Unsupervised_learning"
         },
         {
             "source":"Software_engineering",
-            "target":"Follow-the-sun",
-            "value":1
+            "target":"Follow-the-sun"
         },
         {
             "source":"Software_engineering",
-            "target":"Environmental_engineering",
-            "value":1
+            "target":"Environmental_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Unit_testing",
-            "value":1
+            "target":"Unit_testing"
         },
         {
             "source":"Software_engineering",
-            "target":"Technical_support",
-            "value":1
+            "target":"Technical_support"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_Engineering_Body_of_Knowledge",
-            "value":1
+            "target":"Software_Engineering_Body_of_Knowledge"
         },
         {
             "source":"Software_engineering",
-            "target":"Automotive_engineering",
-            "value":1
+            "target":"Automotive_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Distributed_artificial_intelligence",
-            "value":1
+            "target":"Distributed_artificial_intelligence"
         },
         {
             "source":"Software_engineering",
-            "target":"Electronic_design_automation",
-            "value":1
+            "target":"Electronic_design_automation"
         },
         {
             "source":"Software_engineering",
-            "target":"Benjamin_S._Blanchard",
-            "value":1
+            "target":"Benjamin_S._Blanchard"
         },
         {
             "source":"Software_engineering",
-            "target":"System_dynamics",
-            "value":1
+            "target":"System_dynamics"
         },
         {
             "source":"Software_engineering",
-            "target":"Numerical_analysis",
-            "value":1
+            "target":"Numerical_analysis"
         },
         {
             "source":"Software_engineering",
-            "target":"Nuclear_engineering",
-            "value":1
+            "target":"Nuclear_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Graphics_processing_unit",
-            "value":1
+            "target":"Graphics_processing_unit"
         },
         {
             "source":"Software_engineering",
-            "target":"Distributed_computing",
-            "value":1
+            "target":"Distributed_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_engineering_management",
-            "value":1
+            "target":"Software_engineering_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_civil_engineering",
-            "value":1
+            "target":"Glossary_of_civil_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Fred_Brooks",
-            "value":1
+            "target":"Fred_Brooks"
         },
         {
             "source":"Software_engineering",
-            "target":"Scaled_Agile_Framework",
-            "value":1
+            "target":"Scaled_Agile_Framework"
         },
         {
             "source":"Software_engineering",
-            "target":"Orthogonality_(programming)",
-            "value":1
+            "target":"Orthogonality_(programming)"
         },
         {
             "source":"Software_engineering",
-            "target":"Modularity",
-            "value":1
+            "target":"Modularity"
         },
         {
             "source":"Software_engineering",
-            "target":"Multi-task_learning",
-            "value":1
+            "target":"Multi-task_learning"
         },
         {
             "source":"Software_engineering",
-            "target":"Process_engineering",
-            "value":1
+            "target":"Process_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Metamodeling",
-            "value":1
+            "target":"Metamodeling"
         },
         {
             "source":"Software_engineering",
-            "target":"Infrastructure_as_Code",
-            "value":1
+            "target":"Infrastructure_as_Code"
         },
         {
             "source":"Software_engineering",
-            "target":"Semantics_(computer_science)",
-            "value":1
+            "target":"Semantics_(computer_science)"
         },
         {
             "source":"Software_engineering",
-            "target":"Logic_in_computer_science",
-            "value":1
+            "target":"Logic_in_computer_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_quality",
-            "value":1
+            "target":"Software_quality"
         },
         {
             "source":"Software_engineering",
-            "target":"Robotics",
-            "value":1
+            "target":"Robotics"
         },
         {
             "source":"Software_engineering",
-            "target":"Digital_marketing",
-            "value":1
+            "target":"Digital_marketing"
         },
         {
             "source":"Software_engineering",
-            "target":"Feature-driven_development",
-            "value":1
+            "target":"Feature-driven_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Machine_learning",
-            "value":1
+            "target":"Machine_learning"
         },
         {
             "source":"Software_engineering",
-            "target":"Compiler_construction",
-            "value":1
+            "target":"Compiler_construction"
         },
         {
             "source":"Software_engineering",
-            "target":"IEEE_Standards_Association",
-            "value":1
+            "target":"IEEE_Standards_Association"
         },
         {
             "source":"Software_engineering",
-            "target":"List_of_software_engineering_conferences",
-            "value":1
+            "target":"List_of_software_engineering_conferences"
         },
         {
             "source":"Software_engineering",
-            "target":"System",
-            "value":1
+            "target":"System"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_architecture",
-            "value":1
+            "target":"Software_architecture"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_quality_assurance",
-            "value":1
+            "target":"Software_quality_assurance"
         },
         {
             "source":"Software_engineering",
-            "target":"Data_model",
-            "value":1
+            "target":"Data_model"
         },
         {
             "source":"Software_engineering",
-            "target":"User_experience",
-            "value":1
+            "target":"User_experience"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_versioning",
-            "value":1
+            "target":"Software_versioning"
         },
         {
             "source":"Software_engineering",
-            "target":"Function_model",
-            "value":1
+            "target":"Function_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Information_security",
-            "value":1
+            "target":"Information_security"
         },
         {
             "source":"Software_engineering",
-            "target":"Cryptography",
-            "value":1
+            "target":"Cryptography"
         },
         {
             "source":"Software_engineering",
-            "target":"Programming_tool",
-            "value":1
+            "target":"Programming_tool"
         },
         {
             "source":"Software_engineering",
-            "target":"DevOps",
-            "value":1
+            "target":"DevOps"
         },
         {
             "source":"Software_engineering",
-            "target":"Freelancer",
-            "value":1
+            "target":"Freelancer"
         },
         {
             "source":"Software_engineering",
-            "target":"Image_compression",
-            "value":1
+            "target":"Image_compression"
         },
         {
             "source":"Software_engineering",
-            "target":"Entity%E2%80%93relationship_model",
-            "value":1
+            "target":"Entity%E2%80%93relationship_model"
         },
         {
             "source":"Software_engineering",
-            "target":"Algorithm",
-            "value":1
+            "target":"Algorithm"
         },
         {
             "source":"Software_engineering",
-            "target":"Database_management_system",
-            "value":1
+            "target":"Database_management_system"
         },
         {
             "source":"Software_engineering",
-            "target":"SWEBOK",
-            "value":1
+            "target":"SWEBOK"
         },
         {
             "source":"Software_engineering",
-            "target":"Transportation_engineering",
-            "value":1
+            "target":"Transportation_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Systems_analysis",
-            "value":1
+            "target":"Systems_analysis"
         },
         {
             "source":"Software_engineering",
-            "target":"Systems_Modeling_Language",
-            "value":1
+            "target":"Systems_Modeling_Language"
         },
         {
             "source":"Software_engineering",
-            "target":"Programming_language_theory",
-            "value":1
+            "target":"Programming_language_theory"
         },
         {
             "source":"Software_engineering",
-            "target":"Acceptance_test%E2%80%93driven_development",
-            "value":1
+            "target":"Acceptance_test%E2%80%93driven_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_engineering",
-            "value":1
+            "target":"Computational_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Digital_art",
-            "value":1
+            "target":"Digital_art"
         },
         {
             "source":"Software_engineering",
-            "target":"Institution_of_Engineering_and_Technology",
-            "value":1
+            "target":"Institution_of_Engineering_and_Technology"
         },
         {
             "source":"Software_engineering",
-            "target":"Requirements_analysis",
-            "value":1
+            "target":"Requirements_analysis"
         },
         {
             "source":"Software_engineering",
-            "target":"Wernher_von_Braun",
-            "value":1
+            "target":"Wernher_von_Braun"
         },
         {
             "source":"Software_engineering",
-            "target":"Katia_Sycara",
-            "value":1
+            "target":"Katia_Sycara"
         },
         {
             "source":"Software_engineering",
-            "target":"Cyberwarfare",
-            "value":1
+            "target":"Cyberwarfare"
         },
         {
             "source":"Software_engineering",
-            "target":"Nancy_Leveson",
-            "value":1
+            "target":"Nancy_Leveson"
         },
         {
             "source":"Software_engineering",
-            "target":"Decision-making",
-            "value":1
+            "target":"Decision-making"
         },
         {
             "source":"Software_engineering",
-            "target":"History_of_software_engineering",
-            "value":1
+            "target":"History_of_software_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Behavior-driven_development",
-            "value":1
+            "target":"Behavior-driven_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Chemical_thermodynamics",
-            "value":1
+            "target":"Chemical_thermodynamics"
         },
         {
             "source":"Software_engineering",
-            "target":"Electromechanics",
-            "value":1
+            "target":"Electromechanics"
         },
         {
             "source":"Software_engineering",
-            "target":"Bertrand_Meyer",
-            "value":1
+            "target":"Bertrand_Meyer"
         },
         {
             "source":"Software_engineering",
-            "target":"Biological_systems_engineering",
-            "value":1
+            "target":"Biological_systems_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"CCSE",
-            "value":1
+            "target":"CCSE"
         },
         {
             "source":"Software_engineering",
-            "target":"Health_informatics",
-            "value":1
+            "target":"Health_informatics"
         },
         {
             "source":"Software_engineering",
-            "target":"Glossary_of_structural_engineering",
-            "value":1
+            "target":"Glossary_of_structural_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Real-time_computing",
-            "value":1
+            "target":"Real-time_computing"
         },
         {
             "source":"Software_engineering",
-            "target":"Petroleum_engineering",
-            "value":1
+            "target":"Petroleum_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Document_management_system",
-            "value":1
+            "target":"Document_management_system"
         },
         {
             "source":"Software_engineering",
-            "target":"Project_management",
-            "value":1
+            "target":"Project_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_security",
-            "value":1
+            "target":"Computer_security"
         },
         {
             "source":"Software_engineering",
-            "target":"Mechatronics",
-            "value":1
+            "target":"Mechatronics"
         },
         {
             "source":"Software_engineering",
-            "target":"Biological_engineering",
-            "value":1
+            "target":"Biological_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"ALGOL",
-            "value":1
+            "target":"ALGOL"
         },
         {
             "source":"Software_engineering",
-            "target":"Enterprise_software",
-            "value":1
+            "target":"Enterprise_software"
         },
         {
             "source":"Software_engineering",
-            "target":"Barbara_Grosz",
-            "value":1
+            "target":"Barbara_Grosz"
         },
         {
             "source":"Software_engineering",
-            "target":"Formal_language",
-            "value":1
+            "target":"Formal_language"
         },
         {
             "source":"Software_engineering",
-            "target":"List_of_software_engineering_publications",
-            "value":1
+            "target":"List_of_software_engineering_publications"
         },
         {
             "source":"Software_engineering",
-            "target":"Researcher",
-            "value":1
+            "target":"Researcher"
         },
         {
             "source":"Software_engineering",
-            "target":"Computational_chemistry",
-            "value":1
+            "target":"Computational_chemistry"
         },
         {
             "source":"Software_engineering",
-            "target":"Engineering",
-            "value":1
+            "target":"Engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"System_lifecycle",
-            "value":1
+            "target":"System_lifecycle"
         },
         {
             "source":"Software_engineering",
-            "target":"Transport_phenomena",
-            "value":1
+            "target":"Transport_phenomena"
         },
         {
             "source":"Software_engineering",
-            "target":"Engineering_science",
-            "value":1
+            "target":"Engineering_science"
         },
         {
             "source":"Software_engineering",
-            "target":"Mining_engineering",
-            "value":1
+            "target":"Mining_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Interaction_design",
-            "value":1
+            "target":"Interaction_design"
         },
         {
             "source":"Software_engineering",
-            "target":"Earthquake_engineering",
-            "value":1
+            "target":"Earthquake_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Microsoft_Solutions_Framework",
-            "value":1
+            "target":"Microsoft_Solutions_Framework"
         },
         {
             "source":"Software_engineering",
-            "target":"Audio_engineer",
-            "value":1
+            "target":"Audio_engineer"
         },
         {
             "source":"Software_engineering",
-            "target":"Safety_engineering",
-            "value":1
+            "target":"Safety_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Apple_certification_programs",
-            "value":1
+            "target":"Apple_certification_programs"
         },
         {
             "source":"Software_engineering",
-            "target":"Network_service",
-            "value":1
+            "target":"Network_service"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_repository",
-            "value":1
+            "target":"Software_repository"
         },
         {
             "source":"Software_engineering",
-            "target":"Programming_paradigm",
-            "value":1
+            "target":"Programming_paradigm"
         },
         {
             "source":"Software_engineering",
-            "target":"Configuration_management",
-            "value":1
+            "target":"Configuration_management"
         },
         {
             "source":"Software_engineering",
-            "target":"Aerospace_engineering",
-            "value":1
+            "target":"Aerospace_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Reliability_engineering",
-            "value":1
+            "target":"Reliability_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_development",
-            "value":1
+            "target":"Software_development"
         },
         {
             "source":"Software_engineering",
-            "target":"Software_systems",
-            "value":1
+            "target":"Software_systems"
         },
         {
             "source":"Software_engineering",
-            "target":"E-commerce",
-            "value":1
+            "target":"E-commerce"
         },
         {
             "source":"Software_engineering",
-            "target":"Mary_Shaw_(computer_scientist)",
-            "value":1
+            "target":"Mary_Shaw_(computer_scientist)"
         },
         {
             "source":"Software_engineering",
-            "target":"Object-oriented_programming",
-            "value":1
+            "target":"Object-oriented_programming"
         },
         {
             "source":"Software_engineering",
-            "target":"Construction_engineering",
-            "value":1
+            "target":"Construction_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"Abstraction_(computer_science)",
-            "value":1
+            "target":"Abstraction_(computer_science)"
         },
         {
             "source":"Software_engineering",
-            "target":"Electrical_engineering",
-            "value":1
+            "target":"Electrical_engineering"
         },
         {
             "source":"Software_engineering",
-            "target":"World_Wide_Web",
-            "value":1
+            "target":"World_Wide_Web"
         },
         {
             "source":"Software_engineering",
-            "target":"Computer_animation",
-            "value":1
+            "target":"Computer_animation"
         },
         {
             "source":"Software_engineering",
-            "target":"Quality_function_deployment",
-            "value":1
+            "target":"Quality_function_deployment"
         },
         {
             "source":"Software_engineering",
-            "target":"Digital_library",
-            "value":1
+            "target":"Digital_library"
         },
         {
             "source":"Software_engineering",
-            "target":"ISO_9001",
-            "value":1
+            "target":"ISO_9001"
         }
     ]
 }
