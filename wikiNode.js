@@ -95,12 +95,16 @@ class WikiNode {
   //all titles
   static createIDArr(nodeArray,callback){
     let idArr = [];
+    let titles = []; //list of already created titles
 
     nodeArray.forEach(node=>{
-      idArr.push(JSON.stringify({id: node.title}));
+      idArr.push({id: node.title});
       var links = node.forwardLinks;
       links.forEach(link=>{
-	idArr.push(JSON.stringify({id: link.title}));
+	if (titles.indexOf(link.title) == -1){
+	  titles.push(link.title);
+	  idArr.push({id: link.title});
+	}
       });
     });
     callback(idArr);
@@ -113,10 +117,10 @@ class WikiNode {
     nodeArray.forEach(node=>{
       var links = node.forwardLinks;
       links.forEach(link=>{
-	linksArr.push(JSON.stringify({
+	linksArr.push({
 	  source: node.title,
 	  target: link.title,
-	}));
+	});
       });
     });
     callback(linksArr);

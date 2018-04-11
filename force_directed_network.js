@@ -13,7 +13,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 // Read in the `example.json` file
-d3.json("example.json", function(error, graph) {
+d3.json("graph.json", function(error, graph) {
   if (error) throw error;
 
   // Add the links to the graph `g`
