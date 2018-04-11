@@ -98,7 +98,10 @@ class WikiNode {
     let titles = []; //list of already created titles
 
     nodeArray.forEach(node=>{
-      idArr.push({id: node.title});
+      if (titles.indexOf(node.title) == -1){
+	titles.push(node.title);
+	idArr.push({id: node.title});
+      }
       var links = node.forwardLinks;
       links.forEach(link=>{
 	if (titles.indexOf(link.title) == -1){
