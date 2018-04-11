@@ -17,7 +17,7 @@ const genGraphJSON = function (titles, branches, callback){
       done = done+1;
       if (done==nodeCount){ //all have been completed
 	WikiNode.nodeArrayPrint(nodes, res=>{
-	  fs.writeFile("graph.json",JSON.stringify(res));
+	  callback(res);
 	});
       }
     }); //find the links
@@ -28,7 +28,9 @@ const genGraphJSON = function (titles, branches, callback){
 if (require.main===module){ //being run from console
   argNum = process.argv.length;
   if (argNum>=4 && !isNaN(Number(process.argv[argNum-1]))){
-    genGraphJSON(process.argv.slice(2, argNum-1), process.argv[argNum-1], ()=>{}); //empty callback at the end
+    genGraphJSON(process.argv.slice(2, argNum-1), process.argv[argNum-1], res=>{
+      fs.writeFile("graph.json",JSON.stringify(res));
+    });
   }else{
     console.error('Usage: node.js createGraph.js <titles> <branches>');
   }
