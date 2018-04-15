@@ -19,6 +19,7 @@ class WikiNode {
    */
   constructor(title){
     this.title = title;
+    this.url = '';
     this.branches = 0; //default to 0
     this.forwardLinks = [];
     this.categories = [];
