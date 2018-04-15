@@ -11,11 +11,24 @@ describe ('wikiNode', () => {
 
     let testnode = new WikiNode('computer_science');
     expect(testnode.title).to.be.a('string');
+    expect(testnode.url).to.equal('');
     expect(testnode.branches).to.equal(0);
     expect(testnode.forwardLinks).to.be.empty;
     expect(testnode.categories).to.be.empty;
     expect(testnode.description).to.be.empty;
     done();
+  });
+
+  /*
+   * should be able to fetch its URL
+   */
+  it('should find its url', done => {
+    let testnode = new WikiNode('computer_science');
+    testnode.findURL(() => {
+        expect(testnode.url).to.be.a('string');
+        expect(testnode.url).to.equal('https://en.wikipedia.org/wiki/Computer_science');
+        done();
+    });
   });
 
   /*
@@ -38,7 +51,7 @@ describe ('wikiNode', () => {
       done();
     });
   });
-  
+
   /*
    * Unit test to make sure we can change the number of categories
    */
@@ -137,7 +150,7 @@ describe ('wikiNode', () => {
 	  done();
 	});
       }
-    });   
+    });
   });
 
   /*
@@ -181,7 +194,7 @@ describe ('wikiNode', () => {
 	  done();
 	});
       }
-    });   
+    });
   });
 
   /*
@@ -228,6 +241,6 @@ describe ('wikiNode', () => {
 	  done();
 	});
       }
-    });   
+    });
   });
 });
