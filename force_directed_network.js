@@ -44,8 +44,7 @@ d3.json("graph.json", function(error, graph) {
           .on("drag", dragged)
           .on("end", dragended)
           )
-      .on("click", handleClick)
-          ;
+      .on("click", handleClick);
 
   // Add the id from the JSON as a title tag to each node.
   // Enables hover-over with label
@@ -93,22 +92,25 @@ function dragended(d) {
 }
 
 function handleClick(d,i){
+  console.log(d);
+  // Add this node's metadata to the sidebar
+  d3.select("blockquote")
+    .text(d.id);
 
-   //d3.select(this).node().remove(); //this will remove the node upon click
+  //d3.select(this).node().remove(); // This will remove the node upon click
 
-   //reset all nodes back to original state
-   d3.selectAll("circle")
+  // Reset all nodes back to original state
+  d3.selectAll("circle")
     .attr("fill", function(d) { return color(1); })
-    .attr("r", 5);;
+    .attr("id", null)
+    .attr("r", 5);
 
-  //modify selected node when clicked
-   d3.select(this)
+  // Modify selected node when clicked
+  d3.select(this)
     .transition()
     .attr('fill', '#ff0000')
     .attr("r", 8)
-    .attr("id", "selected")
-    ;
-
+    .attr("id", "selected");
 }
 
 function handleDelete(d,i){
