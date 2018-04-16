@@ -35,7 +35,10 @@ d3.json("graph.json", function(error, graph) {
       .call(d3.drag() // Allow for nodes to be moved
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
+          .on("end", dragended)
+          )
+      .on("click", handleClick)
+          ;
 
   // Add the id from the JSON as a title tag to each node.
   // Enables hover-over with label
@@ -45,7 +48,8 @@ d3.json("graph.json", function(error, graph) {
   // Add the nodes and links to the simulation
   simulation
       .nodes(graph.nodes)
-      .on("tick", ticked);
+      .on("tick", ticked) ;
+
 
   simulation.force("link")
       .links(graph.links);
@@ -79,4 +83,33 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
+}
+
+function handleClick(d,i){
+
+   //d3.select(this).node().remove(); //this will remove the node upon click
+
+   //reset all nodes back to original state
+   d3.selectAll("circle")
+    .attr("fill", function(d) { return color(1); })
+    .attr("r", 5);;
+
+  //modify selected node when clicked
+   d3.select(this)
+    .transition()
+    .attr('fill', '#ff0000')
+    .attr("r", 8)
+    .attr("id", "selected")
+    ;
+
+}
+
+function handleDelete(d,i){
+
+   d3.select("#selected").remove();
+
+   //d3.selectAll("circle").node().remove();//this removes random nodes but leaves links
+
+   //d3.selectAll("line").node().remove();//this removes random links
+
 }
