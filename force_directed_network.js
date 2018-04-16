@@ -1,3 +1,10 @@
+/****************
+ *
+ * This code was heavily inspired by Mike Bostock's implementation of a
+ * force-directed graph layout in D3: https://bl.ocks.org/mbostock/4062045.
+ *
+ * *****************/
+
 // Select the SVG object we have created in `force_directed.html`
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
