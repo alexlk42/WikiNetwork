@@ -95,6 +95,8 @@ function handleClick(d,i){
   // Add this node's metadata to the sidebar
   d3.select("#nodename")
     .text("Name: " + d.id);
+  d3.select("#nodeurl")
+    .text("URL: " + d.url);
   d3.select("#nodecategories")
     .text("Categories: " + d.categories);
   d3.select("#nodedescription")
