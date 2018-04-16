@@ -92,10 +92,13 @@ function dragended(d) {
 }
 
 function handleClick(d,i){
-  console.log(d);
   // Add this node's metadata to the sidebar
-  d3.select("blockquote")
-    .text(d.id);
+  d3.select("#nodename")
+    .text("Name: " + d.id);
+  d3.select("#nodecategories")
+    .text("Categories: " + d.categories);
+  d3.select("#nodedescription")
+    .text("Description: " + d.description);
 
   //d3.select(this).node().remove(); // This will remove the node upon click
 
