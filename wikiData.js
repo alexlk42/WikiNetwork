@@ -141,7 +141,7 @@ class WikiData {
       limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 50) ? 50 : limit;
       return new Promise((resolve, reject) => {
-          this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, result => {
+          this.callAPI(this.createURLString('categories', [title]) + '&clshow=!hidden' + `&cllimit=${limit};`, result => {
             resolve(makeResultArray(result, 'categories', 'title'));
           });
       });
