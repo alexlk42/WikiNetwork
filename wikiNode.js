@@ -38,25 +38,41 @@ class WikiNode {
 
   // Find forwardLinks
   async findForwardLinks() {
-    let links = await WikiData.getForwardLinks(this.title, this.branches);
-    links.forEach(link => {
-      this.forwardLinks.push(new WikiNode(link));
-    });
+    try {
+        let links = await WikiData.getForwardLinks(this.title, this.branches);
+        links.forEach(link => {
+            this.forwardLinks.push(new WikiNode(link));
+        });
+    } catch (err) {
+        console.error(err);
+    }
   }
 
   // Find categories
   async findCategories(){
-    this.categories = await WikiData.getCategories(this.title, this.categoryNum);
+    try {
+        this.categories = await WikiData.getCategories(this.title, this.categoryNum);
+    } catch (err) {
+        console.error(err);
+    }
   }
 
   // Find description
   async findDescription() {
-    this.description = await WikiData.getDescription(this.title);
+    try {
+        this.description = await WikiData.getDescription(this.title);
+    } catch (err) {
+        console.error(err);
+    }
   }
 
   // Find URL
   async findURL() {
-    this.url = await WikiData.getURL(this.title);
+    try {
+        this.url = await WikiData.getURL(this.title);
+    } catch (err) {
+        console.error(err);
+    }
   }
 
   // JSON stringify
