@@ -13,7 +13,7 @@ const genGraphJSON = function (titles, branches, callback){
   for (i=0; i<nodeCount; i++){ //for every node
     nodes[i] = new WikiNode(titles[i]); //create the node
     nodes[i].setBranch(branches); //set the branches
-    nodes[i].findForwardLinks(()=>{
+    nodes[i].findForwardLinks().then(()=>{
       done = done+1;
       if (done==nodeCount){ //all have been completed
 	WikiNode.nodeArrayPrint(nodes, res=>{

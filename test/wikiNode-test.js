@@ -135,7 +135,7 @@ describe ('wikiNode', () => {
     testnode.setBranch(3); //3 branches on 0
     testnode1.setBranch(4); //4 on 1, giving 9 nodes in total
 
-    testnode.findForwardLinks(()=>{
+    testnode.findForwardLinks().then(()=>{
       done0 = 1;
       if (done1){
 	res = WikiNode.createIDArr([testnode,testnode1]);
@@ -143,7 +143,7 @@ describe ('wikiNode', () => {
 	done();
       }
     });
-    testnode1.findForwardLinks(()=>{
+    testnode1.findForwardLinks().then(()=>{
       done1 = 1;
       if (done0){
 	res = WikiNode.createIDArr([testnode,testnode1]);
@@ -178,7 +178,7 @@ describe ('wikiNode', () => {
     testnode.setBranch(3); //3 branches on 0
     testnode1.setBranch(4); //4 on 1, giving 7 links in total
 
-    testnode.findForwardLinks(()=>{
+    testnode.findForwardLinks().then(()=>{
       done0 = 1;
       if (done1){
 	res = WikiNode.createLinksArr([testnode,testnode1]);
@@ -186,7 +186,7 @@ describe ('wikiNode', () => {
 	done();
       }
     });
-    testnode1.findForwardLinks(()=>{
+    testnode1.findForwardLinks().then(()=>{
       done1 = 1;
       if (done0){
 	res = WikiNode.createLinksArr([testnode,testnode1]);
@@ -221,7 +221,7 @@ describe ('wikiNode', () => {
     testnode.setBranch(3); //3 branches on 0
     testnode1.setBranch(4); //4 on 1, giving 7 links in total
 
-    testnode.findForwardLinks(()=>{
+    testnode.findForwardLinks().then(()=>{
       done0 = 1;
       if (done1){
 	WikiNode.nodeArrayPrint([testnode,testnode1],res=>{
@@ -231,7 +231,7 @@ describe ('wikiNode', () => {
 	});
       }
     });
-    testnode1.findForwardLinks(()=>{
+    testnode1.findForwardLinks().then(()=>{
       done1 = 1;
       if (done0){
 	WikiNode.nodeArrayPrint([testnode,testnode1],res=>{
