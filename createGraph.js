@@ -44,9 +44,7 @@ const genGraphJSON = async function (titles, branches, callback){
   });
   try{
     await Promise.all(promises);
-    WikiNode.nodeArrayPrint(nodes, res=>{
-      callback(res);
-    });
+    callback(WikiNode.nodeArrayPrint(nodes));
   }catch(err){
     console.error(err);
   }

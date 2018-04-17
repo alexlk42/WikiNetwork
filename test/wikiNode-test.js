@@ -200,11 +200,10 @@ describe ('wikiNode', () => {
    * Unit test to make sure nodeArrayPrint behaves well with an empty array
    */
   it('should not crash when nodeArrayPrint is given an empty array', done=>{
-    WikiNode.nodeArrayPrint([], res=>{
-      expect(res.nodes).to.be.empty;
-      expect(res.links).to.be.empty;
-      done();
-    });
+    let res = WikiNode.nodeArrayPrint([]);
+    expect(res.nodes).to.be.empty;
+    expect(res.links).to.be.empty;
+    done();
   });
 
   /*
@@ -224,21 +223,19 @@ describe ('wikiNode', () => {
     testnode.findForwardLinks().then(()=>{
       done0 = 1;
       if (done1){
-	WikiNode.nodeArrayPrint([testnode,testnode1],res=>{
-	  expect(res.nodes.length).to.equal(9);
-	  expect(res.links.length).to.equal(7);
-	  done();
-	});
+	let res = WikiNode.nodeArrayPrint([testnode,testnode1]);
+	expect(res.nodes.length).to.equal(9);
+	expect(res.links.length).to.equal(7);
+	done();
       }
     });
     testnode1.findForwardLinks().then(()=>{
       done1 = 1;
       if (done0){
-	WikiNode.nodeArrayPrint([testnode,testnode1],res=>{
-	  expect(res.nodes.length).to.equal(9);
-	  expect(res.links.length).to.equal(7);
-	  done();
-	});
+	let res = WikiNode.nodeArrayPrint([testnode,testnode1]);
+	expect(res.nodes.length).to.equal(9);
+	expect(res.links.length).to.equal(7);
+	done();
       }
     });
   });
