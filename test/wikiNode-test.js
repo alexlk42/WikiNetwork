@@ -100,16 +100,16 @@ describe ('wikiNode', () => {
    * Unit test to make sure createIDArr behaves well with an empty array
    */
   it('should not crash when createIDArr is given an empty array', done=>{
-    WikiNode.createIDArr([], res=>{
-      expect(res).to.be.empty;
-      done();
-    });
+    let res = [];
+    res = WikiNode.createIDArr([]);
+    expect(res).to.be.empty;
+    done();
   });
 
   /*
    * Unit test to make sure createIDArr behaves correctly with a non-empty array
    */
-  it('should create an array with the correct number of elements when createIDArr is given an empty array', done=>{
+  it('should create an array with the correct number of elements when createIDArr is given a non-empty array', done=>{
 
     let testnode = new WikiNode('computer_science');
     let testnode1 = new WikiNode('Denver');
@@ -117,25 +117,25 @@ describe ('wikiNode', () => {
     let done0 = 0;
     let done1 = 0;
 
+    let res=[];
+
     testnode.setBranch(3); //3 branches on 0
     testnode1.setBranch(4); //4 on 1, giving 9 nodes in total
 
     testnode.findForwardLinks(()=>{
       done0 = 1;
       if (done1){
-	WikiNode.createIDArr([testnode,testnode1],res=>{
-	  expect(res.length).to.equal(9);
-	  done();
-	});
+	res = WikiNode.createIDArr([testnode,testnode1]);
+	expect(res.length).to.equal(9);
+	done();
       }
     });
     testnode1.findForwardLinks(()=>{
       done1 = 1;
       if (done0){
-	WikiNode.createIDArr([testnode,testnode1],res=>{
-	  expect(res.length).to.equal(9);
-	  done();
-	});
+	res = WikiNode.createIDArr([testnode,testnode1]);
+	expect(res.length).to.equal(9);
+	done();
       }
     });   
   });
@@ -144,10 +144,9 @@ describe ('wikiNode', () => {
    * Unit test to make sure createLinksArr behaves well with an empty array
    */
   it('should not crash when createLinksArr is given an empty array', done=>{
-    WikiNode.createLinksArr([], res=>{
-      expect(res).to.be.empty;
-      done();
-    });
+    let res = WikiNode.createLinksArr([]);
+    expect(res).to.be.empty;
+    done()
   });
 
   /*
@@ -161,25 +160,25 @@ describe ('wikiNode', () => {
     let done0 = 0;
     let done1 = 0;
 
+    let res=[];
+
     testnode.setBranch(3); //3 branches on 0
     testnode1.setBranch(4); //4 on 1, giving 7 links in total
 
     testnode.findForwardLinks(()=>{
       done0 = 1;
       if (done1){
-	WikiNode.createLinksArr([testnode,testnode1],res=>{
-	  expect(res.length).to.equal(7);
-	  done();
-	});
+	res = WikiNode.createLinksArr([testnode,testnode1]);
+	expect(res.length).to.equal(7);
+	done();
       }
     });
     testnode1.findForwardLinks(()=>{
       done1 = 1;
       if (done0){
-	WikiNode.createLinksArr([testnode,testnode1],res=>{
-	  expect(res.length).to.equal(7);
-	  done();
-	});
+	res = WikiNode.createLinksArr([testnode,testnode1]);
+	expect(res.length).to.equal(7);
+	done();
       }
     });   
   });
@@ -187,7 +186,7 @@ describe ('wikiNode', () => {
   /*
    * Unit test to make sure nodeArrayPrint behaves well with an empty array
    */
-  it('should not crash when createLinksArr is given an empty array', done=>{
+  it('should not crash when nodeArrayPrint is given an empty array', done=>{
     WikiNode.nodeArrayPrint([], res=>{
       expect(res.nodes).to.be.empty;
       expect(res.links).to.be.empty;
@@ -198,7 +197,7 @@ describe ('wikiNode', () => {
   /*
    * Unit test to make sure nodeArrayPrint behaves correctly with a non-empty array
    */
-  it('should create an array with the correct number of elements when createLinksArr is given an empty array', done=>{
+  it('should create an array with the correct number of elements when nodeArrayPrint is given a non-empty array', done=>{
 
     let testnode = new WikiNode('computer_science');
     let testnode1 = new WikiNode('Denver');

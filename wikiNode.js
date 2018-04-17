@@ -93,7 +93,7 @@ class WikiNode {
 
   //Creates the first half of the JSON including
   //all titles
-  static createIDArr(nodeArray,callback){
+  static createIDArr(nodeArray){
     let idArr = [];
     let titles = []; //list of already created titles
 
@@ -110,12 +110,12 @@ class WikiNode {
 	}
       });
     });
-    callback(idArr);
+    return idArr;
   }
 
   //Creates the second half of the JSON including
   //all links
-  static createLinksArr(nodeArray,callback){
+  static createLinksArr(nodeArray){
     let linksArr = [];
     nodeArray.forEach(node=>{
       var links = node.forwardLinks;
@@ -126,18 +126,19 @@ class WikiNode {
 	});
       });
     });
-    callback(linksArr);
+    return linksArr;
   }
 
   //combines the first and second half of the JSON
   static nodeArrayPrint(nodeArray,callback){
     var fullString={};
+    /*
     WikiNode.createIDArr(nodeArray, res=>{
       fullString['nodes']=res;
     });
-    WikiNode.createLinksArr(nodeArray, res=>{
-      fullString['links']=res;
-    });
+    */
+    fullString['nodes'] = WikiNode.createIDArr(nodeArray);
+    fullString['links'] = WikiNode.createLinksArr(nodeArray);
 
     callback(fullString);
   }
