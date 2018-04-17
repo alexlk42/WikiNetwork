@@ -101,15 +101,17 @@ class WikiNode {
     let titles = []; //list of already created titles
 
     nodeArray.forEach(node=>{
-      if (titles.indexOf(node.title) == -1){
-	titles.push(node.title);
-	idArr.push({id: node.title, categories: node.categories});
+      let modtitle = node.title.replace("_", " ");
+      if (titles.indexOf(modtitle) == -1){
+	titles.push(modtitle);
+	idArr.push({id: modtitle, categories: node.categories});
       }
       var links = node.forwardLinks;
       links.forEach(link=>{
-	if (titles.indexOf(link.title) == -1){
-	  titles.push(link.title);
-	  idArr.push({id: link.title, categories: link.categories});
+	let modlinktitle = link.title.replace("_", " ");
+	if (titles.indexOf(modlinktitle) == -1){
+	  titles.push(modlinktitle);
+	  idArr.push({id: modlinktitle, categories: link.categories});
 	}
       });
     });
@@ -124,8 +126,8 @@ class WikiNode {
       var links = node.forwardLinks;
       links.forEach(link=>{
 	linksArr.push({
-	  source: node.title,
-	  target: link.title,
+	  source: node.title.replace("_", " "),
+	  target: link.title.replace("_", " "),
 	});
       });
     });
