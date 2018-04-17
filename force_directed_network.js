@@ -23,6 +23,14 @@ var simulation = d3.forceSimulation()
 d3.json("graph.json", function(error, graph) {
   if (error) throw error;
 
+  // Categories come with "Category:" prefixed.
+  // Let's remove it because it isn't useful to us.
+  graph.nodes.forEach(function(part_i, i) {
+    part_i.categories.forEach(function(part_j, j) {
+      graph.nodes[i].categories[j] = part_j.replace("Category:", "");
+    })
+  });
+
   // Add the links to the graph `g`
   var link = svg.append("g")
       .attr("class", "links")
@@ -104,7 +112,7 @@ function handleClick(d,i){
   d3.select("#nodeurl")
     .text("URL: " + d.url);
   d3.select("#nodecategories")
-    .text("Categories: " + d.categories);
+    .text("Categories: [ " + d.categories.join(", ") + " ]");
   d3.select("#nodedescription")
     .text("Description: " + d.description);
 
