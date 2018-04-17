@@ -103,13 +103,13 @@ class WikiNode {
     nodeArray.forEach(node=>{
       if (titles.indexOf(node.title) == -1){
 	titles.push(node.title);
-	idArr.push({id: node.title, categories: node.categories});
+	idArr.push({id: node.title, categories: node.categories, url: node.url});
       }
       var links = node.forwardLinks;
       links.forEach(link=>{
 	if (titles.indexOf(link.title) == -1){
 	  titles.push(link.title);
-	  idArr.push({id: link.title, categories: link.categories});
+	  idArr.push({id: link.title, categories: link.categories, url: node.url});
 	}
       });
     });

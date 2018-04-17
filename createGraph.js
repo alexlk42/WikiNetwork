@@ -7,9 +7,9 @@ const getData = async function(node,branches){
   try{
     node.setBranch(branches);
     node.setCategoryNum(5);
-    await node.findForwardLinks().then(async ()=>{
-      await node.findCategories();
-    });
+    await node.findURL();
+    await node.findForwardLinks();
+    await node.findCategories();
   }catch (err){
     console.error(err)
   }
