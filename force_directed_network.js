@@ -44,7 +44,8 @@ d3.json("graph.json", function(error, graph) {
           .on("drag", dragged)
           .on("end", dragended)
           )
-      .on("click", handleClick);
+      .on("click", handleClick)
+      .on("dblclick", handleDblClick);
 
   // Add the id from the JSON as a title tag to each node.
   // Enables hover-over with label
@@ -89,6 +90,11 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = d3.event.x;
   d.fy = d3.event.y;
+}
+
+function handleDblClick(d,i){
+  d.fx = null;
+  d.fy = null;
 }
 
 function handleClick(d,i){
