@@ -87,8 +87,8 @@ function dragged(d) {
 
 function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null;
-  d.fy = null;
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
 }
 
 function handleClick(d,i){
