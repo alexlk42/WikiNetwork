@@ -2,7 +2,6 @@
 <meta charset="utf-8">
 <html>
 	<head>
-<svg width="960" height="600"></svg>
 		<link rel="stylesheet" type="text/css" href="wikinetwork.css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -16,7 +15,9 @@
 						},
 						success: function (res) {
 							console.log("success test");
-							displayGraph(null, res);
+							var svg = d3.select("svg");
+							initD3(svg);
+							displayGraph(svg, res);
 						}
 					});
 				});
@@ -52,6 +53,8 @@
 			  Wikipedia Search: <input type = "text" name = "search_name">
 			 <input type = "submit" value = "Search">
 		  </form>
+
+			<svg width="960" height="600"></svg>
 		</div>
 
     </body>

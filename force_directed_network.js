@@ -5,23 +5,27 @@
  *
  * *****************/
 
-// Select the SVG object we have created in `force_directed.html`
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+var d3Color;
+var d3Simulation;
 
-// For node color options
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+function initD3(svg)
+{
+  var width = +svg.attr("width");
+  var height = +svg.attr("height");
 
-// Define the graph layout
-var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
-    .force("center", d3.forceCenter(width / 2, height / 2));
+  // For node color options
+  d3Color = d3.scaleOrdinal(d3.schemeCategory20);
 
-// Read in the `example.json` file
-function displayGraph(error, json) {
-  if (error) throw error;
+  // Define the graph layout
+  d3Simulation = d3.forceSimulation()
+      .force("link", d3.forceLink().id(function(d) { return d.id; }))
+      .force("charge", d3.forceManyBody())
+      .force("center", d3.forceCenter(width / 2, height / 2));
+}
+
+function displayGraph(svg, json) {
+
+  // Convert json to a proper graph object
   var graph = JSON.parse(json);
 
   // Categories come with "Category:" prefixed.
@@ -47,7 +51,7 @@ function displayGraph(error, json) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(1); })
+      .attr("fill", function(d) { return d3Color(1); })
       .call(d3.drag() // Allow for nodes to be moved
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -62,12 +66,12 @@ function displayGraph(error, json) {
       .text(function(d) { return d.id; });
 
   // Add the nodes and links to the simulation
-  simulation
+  d3Simulation
       .nodes(graph.nodes)
       .on("tick", ticked) ;
 
 
-  simulation.force("link")
+  d3Simulation.force("link")
       .links(graph.links);
 
   // Redraws the links and nodes
@@ -85,7 +89,7 @@ function displayGraph(error, json) {
 }
 
 function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  if (!d3.event.active) d3Simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
@@ -96,7 +100,7 @@ function dragged(d) {
 }
 
 function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
+  if (!d3.event.active) d3Simulation.alphaTarget(0);
   d.fx = d3.event.x;
   d.fy = d3.event.y;
 }
@@ -121,7 +125,7 @@ function handleClick(d,i){
 
   // Reset all nodes back to original state
   d3.selectAll("circle")
-    .attr("fill", function(d) { return color(1); })
+    .attr("fill", function(d) { return d3Color(1); })
     .attr("id", null)
     .attr("r", 5);
 
