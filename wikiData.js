@@ -60,7 +60,7 @@ class WikiData {
    */
   static createURLString (prop, titles) {
     let tls = titles.join(DEL); // Join the titles
-    tls = tls.replace('–','%E2%80%93');
+    tls = encodeURIComponent(tls);
     return `${API_URL}?` +
           `action=${ACTION}` +
           `&titles=${tls}` +
