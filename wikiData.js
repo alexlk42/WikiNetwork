@@ -60,6 +60,7 @@ class WikiData {
    */
   static createURLString (prop, titles) {
     let tls = titles.join(DEL); // Join the titles
+    tls = tls.replace('–','%E2%80%93');
     return `${API_URL}?` +
           `action=${ACTION}` +
           `&titles=${tls}` +
@@ -102,11 +103,7 @@ class WikiData {
 
       // Once result is fully here, we can parse and do callback
       res.on('end', function () {
-	try{
 	  callback(JSON.parse(result));
-	}catch(error){
-	  console.log(result);
-	}
       });
     });
   }
