@@ -2,6 +2,7 @@ const WikiNode = require('./wikiNode');
 const WikiData = require('./wikiData');
 
 const fs = require('fs');
+const MAX_HOPS = 3;
 
 const getAllData = async function(node,branches){
   try{
@@ -15,7 +16,7 @@ const getAllData = async function(node,branches){
     console.error(err)
   }
 }
-const getLinkData = async function(node){
+const getLinkData = async function(node, branches, nodes){
   let links = node.forwardLinks;
   try{
     const promises = links.map(async link=>{
@@ -23,6 +24,12 @@ const getLinkData = async function(node){
       await link.findURL();
       await link.findCategories();
       await link.findDescription();
+      if (link.hops < MAX_HOPS) {
+          nodes.push(link);
+          link.setBranch(branches);
+          await link.findForwardLinks();
+          await getLinkData(link, branches, nodes);
+      }
     });
     await Promise.all(promises);
   }catch (err){
@@ -38,11 +45,11 @@ const genGraphJSON = async function (titles, branches, callback){
 
   var i;
   for (i=0; i<nodeCount; i++){ //for every node
-    nodes[i] = new WikiNode(titles[i]); //create the nodes
+    nodes[i] = new WikiNode(titles[i], 0); //create the nodes
   }
   const promises = nodes.map(async node=>{
     await getAllData(node, branches);//get data for each node
-    await getLinkData(node);
+    await getLinkData(node, branches, nodes);
   });
   try{
     await Promise.all(promises);

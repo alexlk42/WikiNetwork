@@ -16,7 +16,7 @@ class WikiNode {
    * The number of branches off of this node is set to 0
    * as a default.
    */
-  constructor(title){
+  constructor(title, hops){
     this.title = title;
     this.url = '';
     this.branches = 0; //default to 0
@@ -24,6 +24,7 @@ class WikiNode {
     this.categories = [];
     this.categoryNum = [];
     this.description = '';
+    this.hops = hops;
   }
 
   // Update branch number
@@ -41,7 +42,7 @@ class WikiNode {
     try {
         let links = await WikiData.getForwardLinks(this.title, this.branches);
         links.forEach(link => {
-            this.forwardLinks.push(new WikiNode(link));
+            this.forwardLinks.push(new WikiNode(link, this.hops + 1));
         });
     } catch (err) {
         console.error(err);
