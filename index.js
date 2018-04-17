@@ -38,9 +38,11 @@ app.get('/clear', function (req, res) {
 //  res.send('Welcome to Wikinetworks');
   //res.render('index', { title: 'Welcome to Wikinode', message: 'Wikinodes' });
 
-// Setup simple routing
+/*
+ * Root routing. Simply redirects to wikinetwork.htm.
+ */
 app.get('/', (req, res) => {
-  WikiData.getURL('Computer_science').then(result => res.send(result));
+  res.redirect('/wikinetwork.htm');
 });
 
 app.listen(3000, function () {
