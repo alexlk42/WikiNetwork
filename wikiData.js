@@ -117,7 +117,7 @@ class WikiData {
    * limit: the max number of links to return.
    * return: a Promise with the result of an array of links.
    */
-  static getForwardLinks (title, limit, callback) {
+  static getForwardLinks (title, limit) {
       limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 500) ? 500 : limit;
       return new Promise((resolve, reject) => {
@@ -137,7 +137,7 @@ class WikiData {
    * limit: the max number of categories to return.
    * return: a Promise with array of categories as the result
    */
-  static getCategories(title, limit, callback) {
+  static getCategories(title, limit) {
       limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 50) ? 50 : limit;
       return new Promise((resolve, reject) => {
@@ -153,7 +153,7 @@ class WikiData {
    * title: should be a title as a string.
    * return: a Promise with the description as the result.
    */
-  static getDescription (title, callback) {
+  static getDescription (title) {
     return new Promise((resolve, reject) => {
         this.callAPI(this.createURLString('description', [title]), result => {
               resolve(result.query.pages[0].description);
