@@ -108,91 +108,71 @@ class WikiData {
   }
 
   /*
-   * Gets the forward links for the give page (specified by title). Will invoke
-   * the given callback once results are ready. Passes an array of links to the callback.
+   * Gets the forward links for the give page (specified by title).
    *
-   * If limit is less than one, no action will happen. If limit is greater than
-   * 500, then it will be capped at 500 and called with 500.
+   * If limit is less than one, a limit of one will be used. If limit
+   * is greater than 500, then it will be capped at 500 and called with 500.
    *
    * title: should be a title as a string.
    * limit: the max number of links to return.
-   * callback: the function to call once the results are in.
-   *
-   * return: true if an API call was made, false otherwise.
+   * return: a Promise with the result of an array of links.
    */
   static getForwardLinks (title, limit, callback) {
-    if (limit > 0) {
+      limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 500) ? 500 : limit;
-      this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
-
-        // Call the user's callback, given the links
-        callback(makeResultArray(result, 'links', 'title'));
+      return new Promise((resolve, reject) => {
+          this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
+            resolve(makeResultArray(result, 'links', 'title'));
+          });
       });
-      return true;
-    }
-    return false;
   }
 
   /*
-   * Gets the categories for the give page (specified by title). Will invoke
-   * the given callback once results are ready. Passes an array of categories to the callback.
+   * Gets the categories for the give page (specified by title).
    *
-   * If limit is less than one, no action will happen. If limit is greater than
+   * If limit is less than one, then one will be used. If limit is greater than
    * 50, then it will be capped at 50 and called with 50.
    *
    * title: should be a title as a string.
    * limit: the max number of categories to return.
-   * callback: the function to call once the results are in.
-   *
-   * return: true if an API call was made, false otherwise.
+   * return: a Promise with array of categories as the result
    */
   static getCategories(title, limit, callback) {
-    if (limit > 0) {
+      limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 50) ? 50 : limit;
-      this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, result => {
-
-        // Call the user's callback, given the categories
-        callback(makeResultArray(result, 'categories', 'title'));
+      return new Promise((resolve, reject) => {
+          this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, result => {
+            resolve(makeResultArray(result, 'categories', 'title'));
+          });
       });
-      return true;
-    }
-    return false;
   }
 
   /*
    * Gets the description for the given page by title.
-   * Passes a string of the description to the callback.
    *
    * title: should be a title as a string.
-   * callback: the function to call once the results are in.
-   *
-   * return: true if an API call was made, false otherwise.
+   * return: a Promise with the description as the result.
    */
   static getDescription (title, callback) {
-    this.callAPI(this.createURLString('description', [title]), result => {
-
-      // Call the user's callback, given the description
-      callback(result.query.pages[0].description);
+    return new Promise((resolve, reject) => {
+        this.callAPI(this.createURLString('description', [title]), result => {
+              resolve(result.query.pages[0].description);
+        });
     });
-    return true;
   }
 
   /*
-   * Gets the URL for the given page by title. Passes a string of the URL to the
-   * callback.
+   * Gets the URL for the given page by title.
    *
    * title: should be a title as a string.
-   * callback: the function to call once the results are in.
-   *
-   * return: true if an API call was made, false otherwise.
+   * return: a Promise with the URL string as the result.
    */
-  static getURL (title, callback) {
-    this.callAPI(this.createURLString('info', [title]) + '&inprop=url', result => {
-
-      // Call the user's callback, given the URL.
-      callback(result.query.pages[0].fullurl);
+  static getURL (title) {
+    return new Promise((resolve, reject) => {
+        this.callAPI(this.createURLString('info', [title]) + '&inprop=url', result => {
+            resolve(result.query.pages[0].fullurl);
+        });
     });
-    return true;
   }
 }
 

@@ -24,11 +24,11 @@ describe ('wikiNode', () => {
    */
   it('should find its url', done => {
     let testnode = new WikiNode('computer_science');
-    testnode.findURL(() => {
+    testnode.findURL().then(() => {
         expect(testnode.url).to.be.a('string');
         expect(testnode.url).to.equal('https://en.wikipedia.org/wiki/Computer_science');
         done();
-    });
+    })
   });
 
   /*
@@ -44,10 +44,10 @@ describe ('wikiNode', () => {
   /*
    * Unit test to make sure that no links are found when branches is set to 0.
    */
-  it('should find links when branches is set to non-0', done=>{
+  it('should find one link when branches is set to 0', done=>{
     let testnode = new WikiNode('computer_science');
-    testnode.findForwardLinks(()=>{
-      expect(testnode.forwardLinks).to.be.empty;
+    testnode.findForwardLinks().then(()=>{
+      expect(testnode.forwardLinks.length).to.equal(1)
       done();
     });
   });
@@ -65,21 +65,21 @@ describe ('wikiNode', () => {
   /*
    * Unit test to make sure that no categories are found when categoryNum is set to 0.
    */
-  it('should not find categories when categoryNum is set to 0', done=>{
+  it('should find 1 category when categoryNum is set to 0', done=>{
     let testnode = new WikiNode('computer_science');
-    testnode.findCategories(()=>{
-      expect(testnode.categories).to.be.empty;
+    testnode.findCategories().then(()=>{
+      expect(testnode.categories.length).to.equal(1);
       done();
     });
   });
 
   /*
-   * Unit test to make sure that the correct number of categories are found when branches is not set to 0.
+   * Unit test to make sure that the correct number of categories are found when branches is not set to 3.
    */
   it('should find categories when categoryNum is set to non-0', done=>{
     let testnode = new WikiNode('computer_science');
     testnode.setCategoryNum(3);
-    testnode.findCategories(()=>{
+    testnode.findCategories().then(()=>{
       expect(testnode.categories.length).to.equal(3);
       done();
     });
@@ -90,7 +90,7 @@ describe ('wikiNode', () => {
    */
   it('should return a string when findDescription is called', done=>{
     let testnode = new WikiNode('computer_science');
-    testnode.findDescription(()=>{
+    testnode.findDescription().then(()=>{
       expect(testnode.description).to.be.a('string');
       done();
     });
@@ -100,10 +100,10 @@ describe ('wikiNode', () => {
   /*
    * Unit test to make sure that the correct number of links are found when branches is not set to 0.
    */
-  it('should not find links when branches is set to 0', done=>{
+  it('should find 1 link when branches is set to 0', done=>{
     let testnode = new WikiNode('computer_science');
     testnode.setBranch(3);
-    testnode.findForwardLinks(()=>{
+    testnode.findForwardLinks().then(()=>{
       expect(testnode.forwardLinks.length).to.equal(3);
       done();
     });

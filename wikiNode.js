@@ -37,48 +37,26 @@ class WikiNode {
   }
 
   // Find forwardLinks
-  findForwardLinks(callback) {
-
-    if (this.branches==0){ //doesn't ask for links if 0
-      callback();
-
-    }else{ //Create new nodes for each link
-      WikiData.getForwardLinks(this.title, this.branches, result => {
-	var links = result;
-	links.forEach(link=>{
-	  this.forwardLinks.push(new WikiNode(link));
-	});
-	callback();
-      });
-    }
+  async findForwardLinks() {
+    let links = await WikiData.getForwardLinks(this.title, this.branches);
+    links.forEach(link => {
+      this.forwardLinks.push(new WikiNode(link));
+    });
   }
 
   // Find categories
-  findCategories(callback){
-    if (this.categoryNum==0){
-      callback();
-    }else{
-      WikiData.getCategories(this.title, this.categoryNum, result => {
-	this.categories = result;
-	callback();
-      });
-    }
+  async findCategories(){
+    this.categories = await WikiData.getCategories(this.title, this.categoryNum);
   }
 
   // Find description
-  findDescription(callback){
-    WikiData.getDescription(this.title, result => {
-      this.description = result;
-      callback();
-    });
+  async findDescription() {
+    this.description = await WikiData.getDescription(this.title);
   }
 
   // Find URL
-  findURL(callback) {
-    WikiData.getURL(this.title, result => {
-        this.url = result;
-        callback();
-    });
+  async findURL() {
+    this.url = await WikiData.getURL(this.title);
   }
 
   // JSON stringify
