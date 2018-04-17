@@ -102,7 +102,11 @@ class WikiData {
 
       // Once result is fully here, we can parse and do callback
       res.on('end', function () {
-        callback(JSON.parse(result));
+	try{
+	  callback(JSON.parse(result));
+	}catch(error){
+	  console.log(result);
+	}
       });
     });
   }
