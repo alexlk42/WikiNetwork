@@ -95,10 +95,10 @@ describe('wikiData', () => {
    * Here we expect to get back exactly 5 categories.
    */
   it('should return 5 categories', done => {
-    let res = WikiData.getCategories('Computer_science', 5, (result) => {
+    let res = WikiData.getCategories('Computer_science', 3, (result) => {
       expect(result).to.be.a('array');
       result.forEach(item => expect(item).to.be.a('string'));
-      expect(result).to.have.lengthOf(5);
+      expect(result).to.have.lengthOf(3);
       done();
     });
     expect(res).to.be.true;

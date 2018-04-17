@@ -109,13 +109,13 @@ class WikiNode {
     nodeArray.forEach(node=>{
       if (titles.indexOf(node.title) == -1){
 	titles.push(node.title);
-	idArr.push({id: node.title});
+	idArr.push({id: node.title, categories: node.categories});
       }
       var links = node.forwardLinks;
       links.forEach(link=>{
 	if (titles.indexOf(link.title) == -1){
 	  titles.push(link.title);
-	  idArr.push({id: link.title});
+	  idArr.push({id: link.title, categories: link.categories});
 	}
       });
     });

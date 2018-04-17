@@ -149,7 +149,7 @@ class WikiData {
   static getCategories(title, limit, callback) {
     if (limit > 0) {
       limit = (limit > 50) ? 50 : limit;
-      this.callAPI(this.createURLString('categories', [title]) + `&cllimit=${limit};`, result => {
+      this.callAPI(this.createURLString('categories', [title]) + '&clshow=!hidden' + `&cllimit=${limit};`, result => {
 
         // Call the user's callback, given the categories
         callback(makeResultArray(result, 'categories', 'title'));
