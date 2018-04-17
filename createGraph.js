@@ -27,9 +27,7 @@ const genGraphJSON = async function (titles, branches, callback){
   const promises = nodes.map(node=>getData(node, branches));//get data for each node
   try{
     await Promise.all(promises);
-    WikiNode.nodeArrayPrint(nodes, res=>{
-      callback(res);
-    });
+    callback(WikiNode.nodeArrayPrint(nodes));
   }catch(err){
     console.error(err);
   }
