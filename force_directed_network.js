@@ -110,7 +110,7 @@ function handleClick(d,i){
   d3.select("#nodename")
     .text("Name: " + d.id);
   d3.select("#nodeurl")
-    .text("URL: " + d.url);
+    .html("URL: <a href='" + d.url + "'>" + d.url + "</a>");
   d3.select("#nodecategories")
     .text("Categories: [ " + d.categories.join(", ") + " ]");
   d3.select("#nodedescription")
