@@ -4,7 +4,6 @@
 	<head>
 	
 		<link rel="stylesheet" type="text/css" href="wikinetwork.css" media="screen" />		
-		<link rel="stylesheet" type="text/css" href="force_directed_style.css"/>
 		
 	</head>
 
@@ -15,7 +14,11 @@
 		<div class="sidebar">
 		  <a href="#about">About</a>
 		  <a href="#nodeinfo">Node Info</a>
-		    <BLOCKQUOTE>Node Metadata</BLOCKQUOTE>
+		    <BLOCKQUOTE id="nodename"> </BLOCKQUOTE>
+		    <BLOCKQUOTE id="nodeurl"> </BLOCKQUOTE>
+		    <BLOCKQUOTE id="nodecategories"> </BLOCKQUOTE>
+		    <BLOCKQUOTE id="nodedescription"> </BLOCKQUOTE>
+		  <a><button type="button" class="btn btn-default" onclick="handleDelete()">Delete Node</button></a>
 		  
 		</div>
 		<!-- /sidebar-->

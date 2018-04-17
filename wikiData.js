@@ -176,6 +176,24 @@ class WikiData {
     });
     return true;
   }
+
+  /*
+   * Gets the URL for the given page by title. Passes a string of the URL to the
+   * callback.
+   *
+   * title: should be a title as a string.
+   * callback: the function to call once the results are in.
+   *
+   * return: true if an API call was made, false otherwise.
+   */
+  static getURL (title, callback) {
+    this.callAPI(this.createURLString('info', [title]) + '&inprop=url', result => {
+
+      // Call the user's callback, given the URL.
+      callback(result.query.pages[0].fullurl);
+    });
+    return true;
+  }
 }
 
 // Export the WikiData class.

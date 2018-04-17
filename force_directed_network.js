@@ -1,3 +1,10 @@
+/****************
+ *
+ * This code was heavily inspired by Mike Bostock's implementation of a
+ * force-directed graph layout in D3: https://bl.ocks.org/mbostock/4062045.
+ *
+ * *****************/
+
 // Select the SVG object we have created in `force_directed.html`
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -35,7 +42,9 @@ d3.json("graph.json", function(error, graph) {
       .call(d3.drag() // Allow for nodes to be moved
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
+          .on("end", dragended)
+          )
+      .on("click", handleClick);
 
   // Add the id from the JSON as a title tag to each node.
   // Enables hover-over with label
@@ -45,7 +54,8 @@ d3.json("graph.json", function(error, graph) {
   // Add the nodes and links to the simulation
   simulation
       .nodes(graph.nodes)
-      .on("tick", ticked);
+      .on("tick", ticked) ;
+
 
   simulation.force("link")
       .links(graph.links);
@@ -79,4 +89,41 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
+}
+
+function handleClick(d,i){
+  // Add this node's metadata to the sidebar
+  d3.select("#nodename")
+    .text("Name: " + d.id);
+  d3.select("#nodeurl")
+    .text("URL: " + d.url);
+  d3.select("#nodecategories")
+    .text("Categories: " + d.categories);
+  d3.select("#nodedescription")
+    .text("Description: " + d.description);
+
+  //d3.select(this).node().remove(); // This will remove the node upon click
+
+  // Reset all nodes back to original state
+  d3.selectAll("circle")
+    .attr("fill", function(d) { return color(1); })
+    .attr("id", null)
+    .attr("r", 5);
+
+  // Modify selected node when clicked
+  d3.select(this)
+    .transition()
+    .attr('fill', '#ff0000')
+    .attr("r", 8)
+    .attr("id", "selected");
+}
+
+function handleDelete(d,i){
+
+   d3.select("#selected").remove();
+
+   //d3.selectAll("circle").node().remove();//this removes random nodes but leaves links
+
+   //d3.selectAll("line").node().remove();//this removes random links
+
 }

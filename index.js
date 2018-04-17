@@ -31,7 +31,7 @@ app.get('/process_get', function (req, res) {
 })
 
 app.get('/clear', function (req, res) {
-   
+
 })
 
 //app.get('/', function (req, res) {
@@ -40,7 +40,8 @@ app.get('/clear', function (req, res) {
 
 // Setup simple routing
 app.get('/', (req, res) => {
-  WikiData.getCategories('Computer_science', 5, result => res.send(JSON.stringify(result)));
+  WikiData.getURL('Computer_science', result => res.send(result));
+  //WikiData.getCategories('Computer_science', 5, result => res.send(JSON.stringify(result)));
   //WikiData.getForwardLinks('Computer_science', 1, result => res.send(JSON.stringify(result)));
   //WikiData.getDescription('Computer_science', result => res.send(JSON.stringify(result)));
 });

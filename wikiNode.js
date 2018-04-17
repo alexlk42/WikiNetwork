@@ -13,12 +13,12 @@ class WikiNode {
 
   /* constructor
    * Creates a node with the given title.
-   * Also creates the corresponding WikiData class.
    * The number of branches off of this node is set to 0
    * as a default.
    */
   constructor(title){
     this.title = title;
+    this.url = '';
     this.branches = 0; //default to 0
     this.forwardLinks = [];
     this.categories = [];
@@ -73,10 +73,19 @@ class WikiNode {
     });
   }
 
+  // Find URL
+  findURL(callback) {
+    WikiData.getURL(this.title, result => {
+        this.url = result;
+        callback();
+    });
+  }
+
   // JSON stringify
   toJSON() {
     return {
       title: this.title,
+      url: this.url,
       branches: this.branches,
       forwardLinks: this.forwardLinks,
       categories: this.categories,

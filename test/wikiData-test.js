@@ -129,4 +129,16 @@ describe('wikiData', () => {
     });
     expect(res).to.be.true;
   });
+
+  /*
+   * Unit test for making sure getURL() works as expected.
+   */
+  it ('should return the correct URL for the CS page', done => {
+    let res = WikiData.getURL('Computer_science', (result) => {
+      expect(result).to.be.a('string');
+      expect(result).to.equal('https://en.wikipedia.org/wiki/Computer_science');
+      done();
+    });
+    expect(res).to.be.true;
+  });
 });
