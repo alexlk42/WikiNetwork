@@ -7,6 +7,7 @@
 var express = require('express');
 var app = express();
 const WikiData = require('./wikiData');
+const genGraphJSON = require('./createGraph');
 
 app.get('/index.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "index.htm" );
@@ -21,17 +22,16 @@ app.get('/wikinetwork.htm', function (req, res) {
 })
 
 app.get('/process_get', function (req, res) {
-   // Prepare output in JSON format
-   response = {
-      first_name:req.query.first_name,
-      last_name:req.query.last_name
-   };
-   console.log(response);
-   res.end(JSON.stringify(response));
+        console.log("process test");
+        let centerTitle = "Computer_science";
+        let branches = 3;
+        let numHops = 3;
+        genGraphJSON([centerTitle], branches, numHops, (json) => {
+                res.send(JSON.stringify(json));
+        });
 })
 
 app.get('/clear', function (req, res) {
-
 })
 
 //app.get('/', function (req, res) {

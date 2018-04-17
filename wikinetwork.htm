@@ -2,14 +2,31 @@
 <meta charset="utf-8">
 <html>
 	<head>
-	
-		<link rel="stylesheet" type="text/css" href="wikinetwork.css" media="screen" />		
-		
+<svg width="960" height="600"></svg>
+		<link rel="stylesheet" type="text/css" href="wikinetwork.css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://d3js.org/d3.v4.min.js"></script>
+	  <script src="force_directed_network.js"></script>
+ 		<script>
+				$(document).ready(function () {
+					console.log("about to call ajax");
+					$.ajax({url: "http://localhost:3000/process_get",
+						error: function (error) {
+							console.error(error);
+						},
+						success: function (res) {
+							console.log("success test");
+							displayGraph(null, res);
+						}
+					});
+				});
+		</script>
+
 	</head>
 
     <body>
-		
- 
+
+
 		<!-- Sidebar -->
 		<div class="sidebar">
 		  <a href="#about">About</a>
@@ -19,29 +36,23 @@
 		    <BLOCKQUOTE id="nodecategories"> </BLOCKQUOTE>
 		    <BLOCKQUOTE id="nodedescription"> </BLOCKQUOTE>
 		  <a><button type="button" class="btn btn-default" onclick="handleDelete()">Delete Node</button></a>
-		  
+
 		</div>
 		<!-- /sidebar-->
 
-		
+
 		<div class="main">
 		  <h3>Welcome to WikiNetwork</h3>
 		  <form action = "http://127.0.0.1:3000/clear" method = "GET">
 			 <input type = "submit" value = "Clear Graph">
-		  </form> 
-		  
+		  </form>
+
 		  <p>Please enter a Wikipedia subject in the field and click Search</p>
 		  <form action = "http://127.0.0.1:3000/process_get" method = "GET">
 			  Wikipedia Search: <input type = "text" name = "search_name">
 			 <input type = "submit" value = "Search">
-		  </form> 
-		
-		</div>   
- 
+		  </form>
+		</div>
+
     </body>
-	
-	<svg width="960" height="600"></svg>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="force_directed_network.js"></script>
-		
 </html>

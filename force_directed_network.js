@@ -20,8 +20,9 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 // Read in the `example.json` file
-d3.json("graph.json", function(error, graph) {
+function displayGraph(error, json) {
   if (error) throw error;
+  var graph = JSON.parse(json);
 
   // Categories come with "Category:" prefixed.
   // Let's remove it because it isn't useful to us.
@@ -81,7 +82,7 @@ d3.json("graph.json", function(error, graph) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
-});
+}
 
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
