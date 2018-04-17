@@ -1,5 +1,11 @@
 .DS_Store
 .jshintrc
+*.swp
+graph.json
+erlang-solutions_1.0_all.deb
+output.json
+quicktest.js
+
 
 #
 # The rest of this .gitignore from https://github.com/github/gitignore/blob/master/Node.gitignore
