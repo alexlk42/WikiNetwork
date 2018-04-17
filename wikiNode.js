@@ -104,14 +104,14 @@ class WikiNode {
       let modtitle = node.title.replace("_", " ");
       if (titles.indexOf(modtitle) == -1){
 	titles.push(modtitle);
-	idArr.push({id: modtitle, categories: node.categories, url: node.url});
+	idArr.push({id: modtitle, categories: node.categories, url: node.url, description: node.description});
       }
       var links = node.forwardLinks;
       links.forEach(link=>{
 	let modlinktitle = link.title.replace("_", " ");
 	if (titles.indexOf(modlinktitle) == -1){
 	  titles.push(modlinktitle);
-	  idArr.push({id: modlinktitle, categories: link.categories, url: link.url});
+	  idArr.push({id: modlinktitle, categories: link.categories, url: link.url, description: link.description});
 	}
       });
     });

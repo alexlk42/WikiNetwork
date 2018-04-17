@@ -10,6 +10,7 @@ const getAllData = async function(node,branches){
     await node.findURL();
     await node.findForwardLinks();
     await node.findCategories();
+    await node.findDescription();
   }catch (err){
     console.error(err)
   }
@@ -21,6 +22,7 @@ const getLinkData = async function(node){
       link.setCategoryNum(5);
       await link.findURL();
       await link.findCategories();
+      await link.findDescription();
     });
     await Promise.all(promises);
   }catch (err){
