@@ -7,20 +7,30 @@ const genGraphJSON = function (titles, branches, callback){
 
   nodeCount = titles.length; //how many nodes to create
   nodes = new Array(nodeCount);
-  done = 0;
+  doneL = 0;
+  doneC = 0;
 
   var i;
   for (i=0; i<nodeCount; i++){ //for every node
     nodes[i] = new WikiNode(titles[i]); //create the node
     nodes[i].setBranch(branches); //set the branches
+    nodes[i].setCategoryNum(5); //hardcode for now
     nodes[i].findForwardLinks().then(()=>{
-      done = done+1;
-      if (done==nodeCount){ //all have been completed
+      doneL = doneL+1;
+      if (doneL==nodeCount && doneC==nodeCount){ //all have been completed
 	WikiNode.nodeArrayPrint(nodes, res=>{
 	  callback(res);
 	});
       }
     }); //find the links
+    nodes[i].findCategories().then(()=>{
+      doneC = doneC+1;
+      if (doneL==nodeCount && doneC==nodeCount){ //all have been completed
+	WikiNode.nodeArrayPrint(nodes, res=>{
+	  callback(res);
+	});
+      }
+    }); //find the categories
   }
 
 }
