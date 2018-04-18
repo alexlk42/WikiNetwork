@@ -23,7 +23,7 @@ app.get('/wikinetwork.htm', function (req, res) {
 
 app.get('/fetch_graph', function (req, res) {
         let centerTitle = req.query.title;
-        let branches = 3;
+        let branches = +req.query.branches;
         let numHops = +req.query.hops;
         genGraphJSON([centerTitle], branches, numHops, (json) => {
                 res.send(JSON.stringify(json));
