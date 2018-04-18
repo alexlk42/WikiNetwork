@@ -23,7 +23,7 @@ app.get('/wikinetwork.htm', function (req, res) {
 
 app.get('/process_get', function (req, res) {
         console.log("process test");
-        let centerTitle = "Computer_science";
+        let centerTitle = req.query.title;
         let branches = 3;
         let numHops = 3;
         genGraphJSON([centerTitle], branches, numHops, (json) => {

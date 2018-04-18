@@ -7,9 +7,10 @@
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script src="force_directed_network.js"></script>
  		<script>
-				$(document).ready(function () {
-					console.log("about to call ajax");
-					$.ajax({url: "http://localhost:3000/process_get",
+				function fetchGraph() {
+					var title = $("#searchField").val();
+					console.log(title);
+					$.ajax({url: "http://localhost:3000/process_get?title=" + title,
 						error: function (error) {
 							console.error(error);
 						},
@@ -20,7 +21,7 @@
 							displayGraph(svg, res);
 						}
 					});
-				});
+				}
 		</script>
 
 	</head>
@@ -49,13 +50,10 @@
 		  </form>
 
 		  <p>Please enter a Wikipedia subject in the field and click Search</p>
-		  <form action = "http://127.0.0.1:3000/process_get" method = "GET">
-			  Wikipedia Search: <input type = "text" name = "search_name">
-			 <input type = "submit" value = "Search">
-		  </form>
-
-			<svg width="960" height="600"></svg>
+			<button onclick="fetchGraph()" type="button">Search</button>
+			<input id="searchField" type="text">
 		</div>
+		<svg width="960" height="600"></svg>
 
     </body>
 </html>
