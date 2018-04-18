@@ -12,7 +12,7 @@
           var hops = $("#hopsField").val();
           var branches = $("#branchesField").val();
 					var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches;
-					var apiUrl = "http://localhost:3000/fetch_graph" + urlParams;
+					var apiUrl = "/fetch_graph" + urlParams;
 					console.log(title);
 					$.ajax({url: apiUrl,
 						error: function (error) {
