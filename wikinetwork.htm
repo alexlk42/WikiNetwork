@@ -9,8 +9,9 @@
  		<script>
 				function fetchGraph() {
 					var title = $("#searchField").val();
+          var hops = $("#hopsField").val();
 					console.log(title);
-					$.ajax({url: "http://localhost:3000/fetch_graph?title=" + title,
+					$.ajax({url: "http://localhost:3000/fetch_graph?title=" + title + "&hops=" + hops,
 						error: function (error) {
 							console.error(error);
 						},
@@ -51,6 +52,8 @@
 		  <p>Please enter a Wikipedia subject in the field and click Search</p>
 			<button onclick="fetchGraph()" type="button">Search</button>
 			<input id="searchField" type="text">
+      <label for="hopsField">Hops:</label>
+      <input id="hopsField" value="1" min="0" max="3" type="number">
 		</div>
 		<svg id="viewport" width="960" height="600"></svg>
 
