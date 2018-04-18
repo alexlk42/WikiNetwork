@@ -7,3 +7,10 @@ Day Hours Month Day
 5 50.75 Apr 04
 6 33    Apr 05
 7 33    Apr 06
+8 33    Apr 09
+9 33    Apr 10
+10 33    Apr 11
+11 33    Apr 12
+12 33    Apr 13
+13 28.5    Apr 16
+14 25    Apr 17
