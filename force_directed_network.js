@@ -28,6 +28,9 @@ function displayGraph(svg, json) {
   // Convert json to a proper graph object
   var graph = JSON.parse(json);
 
+  // Clear the svg viewport
+  $("#viewport").empty();
+
   // Categories come with "Category:" prefixed.
   // Let's remove it because it isn't useful to us.
   graph.nodes.forEach(function(part_i, i) {

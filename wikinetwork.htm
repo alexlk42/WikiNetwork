@@ -10,12 +10,11 @@
 				function fetchGraph() {
 					var title = $("#searchField").val();
 					console.log(title);
-					$.ajax({url: "http://localhost:3000/process_get?title=" + title,
+					$.ajax({url: "http://localhost:3000/fetch_graph?title=" + title,
 						error: function (error) {
 							console.error(error);
 						},
 						success: function (res) {
-							console.log("success test");
 							var svg = d3.select("svg");
 							initD3(svg);
 							displayGraph(svg, res);
@@ -53,7 +52,7 @@
 			<button onclick="fetchGraph()" type="button">Search</button>
 			<input id="searchField" type="text">
 		</div>
-		<svg width="960" height="600"></svg>
+		<svg id="viewport" width="960" height="600"></svg>
 
     </body>
 </html>

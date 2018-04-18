@@ -21,8 +21,7 @@ app.get('/wikinetwork.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "wikinetwork.htm" );
 })
 
-app.get('/process_get', function (req, res) {
-        console.log("process test");
+app.get('/fetch_graph', function (req, res) {
         let centerTitle = req.query.title;
         let branches = 3;
         let numHops = 3;
