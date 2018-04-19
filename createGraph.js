@@ -41,6 +41,12 @@ const getLinkData = async function(node, branches, nodes, numHops){
   }
 }
 
+/*Main function for creating a JSON of the graph.
+ * Takes an array of center node titles, the number of
+ * branches for each node, and the number of hops away
+ * the graph should extend. Returns a JSON containing
+ * the necessary information for the graph.
+ */
 const genGraphJSON = async function (titles, branches, numHops){
 
   nodeCount = titles.length; //how many nodes to create
