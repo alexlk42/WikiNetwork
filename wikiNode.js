@@ -35,7 +35,6 @@ class WikiNode {
   // Update category number
   setCategoryNum(num){
     this.categoryNum = num;
-    return Promise.resolve();
   }
 
   // Find forwardLinks
@@ -54,7 +53,6 @@ class WikiNode {
   async findCategories(){
     try {
         this.categories = await WikiData.getCategories(this.title, this.categoryNum);
-	return Promise.resolve();
     } catch (err) {
         console.error(err);
     }
@@ -64,7 +62,6 @@ class WikiNode {
   async findDescription() {
     try {
         this.description = await WikiData.getDescription(this.title);
-	return Promise.resolve();
     } catch (err) {
         console.error(err);
     }
@@ -74,7 +71,6 @@ class WikiNode {
   async findURL() {
     try {
         this.url = await WikiData.getURL(this.title);
-	return Promise.resolve();
     } catch (err) {
         console.error(err);
     }
