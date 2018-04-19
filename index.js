@@ -21,13 +21,15 @@ app.get('/wikinetwork.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "wikinetwork.htm" );
 })
 
-app.get('/fetch_graph', function (req, res) {
+app.get('/fetch_graph', async function (req, res) {
         let centerTitle = req.query.title;
         let branches = +req.query.branches;
         let numHops = +req.query.hops;
-        genGraphJSON([centerTitle], branches, numHops, (json) => {
-                res.send(JSON.stringify(json));
-        });
+        //genGraphJSON([centerTitle], branches, numHops, (json) => {
+         //       res.send(JSON.stringify(json));
+        //});
+	let graph = await genGraphJSON([centerTitle], branches, numHops);
+	res.send(JSON.stringify(graph));
 })
 
 app.get('/clear', function (req, res) {

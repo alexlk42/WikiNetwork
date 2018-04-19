@@ -138,15 +138,11 @@ class WikiNode {
   //combines the first and second half of the JSON
   static nodeArrayPrint(nodeArray) {
     var fullString={};
-    /*
-    WikiNode.createIDArr(nodeArray, res=>{
-      fullString['nodes']=res;
-    });
-    */
+
     fullString['nodes'] = WikiNode.createIDArr(nodeArray);
     fullString['links'] = WikiNode.createLinksArr(nodeArray);
 
-   return fullString;
+    return fullString;
   }
 }
 
