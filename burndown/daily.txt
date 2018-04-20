@@ -15,4 +15,5 @@ Day Hours Month Day
 13 28.5 Apr 16
 14 25   Apr 17
 15 25   Apr 18
-16 22.5 APR 19
+16 22.5 Apr 19
+17 20.5 Apr 20

@@ -1,4 +1,4 @@
 Iteration Points
 0 36
 1 25
-2 18
+2 15
