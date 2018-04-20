@@ -137,12 +137,36 @@ function handleClick(d,i){
     .transition()
     .attr('fill', '#ff0000')
     .attr("r", 8)
+    .attr("nodeValue" , "selected")
     .attr("id", "selected");
+
+  // Reset all lines back to original state
+  d3.selectAll("line")
+    .attr("id", null)
+    .attr("stroke-width", function(d) { return 1; });  
+
+  //Modify target lines of selected node
+  d3.selectAll("line")
+    .filter(function(m){ return m.target.id === d.id; })
+    .transition()
+      .attr('fill', '#ff0000')
+      .attr("id", "selectedline")
+      .attr("stroke-width", function(d) { return 5; });        
+  
+  //Modify source lines of selected node
+  d3.selectAll("line")
+    .filter(function(m){ return m.source.id === d.id; })
+    .transition()
+      .attr('fill', '#ff0000')
+      .attr("id", "selectedline")
+      .attr("stroke-width", function(d) { return 5; });    
+
 }
 
 function handleDelete(d,i){
 
-   d3.select("#selected").remove();
+   d3.selectAll("#selected").remove();
+   d3.selectAll("#selectedline").remove();
 
    //d3.selectAll("circle").node().remove();//this removes random nodes but leaves links
 
