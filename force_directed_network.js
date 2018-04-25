@@ -39,8 +39,14 @@ function displayGraph(svg, json) {
     })
   });
 
+  var canvas = svg.call(d3.zoom().on("zoom", function () {
+        svg.attr("transform", d3.event.transform)
+    }))
+    .append("g")
+    .attr("class", "canvas");;
+
   // Add the links to the graph `g`
-  var link = svg.append("g")
+  var link = canvas.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
@@ -48,7 +54,7 @@ function displayGraph(svg, json) {
       .attr("stroke-width", function(d) { return 1; });
 
   // Add the nodes to the graph `g`
-  var node = svg.append("g")
+  var node = canvas.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes)
@@ -73,7 +79,6 @@ function displayGraph(svg, json) {
       .nodes(graph.nodes)
       .on("tick", ticked) ;
 
-
   d3Simulation.force("link")
       .links(graph.links);
 
@@ -89,6 +94,17 @@ function displayGraph(svg, json) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
   }
+
+  // Support zooming (two finger scroll) and 
+  // panning (drag on canvas)
+  var handleZoom = d3.zoom()
+    .on("zoom", zoomed);
+
+  function zoomed(){
+    canvas.attr("transform", d3.event.transform);
+  }
+
+  handleZoom(svg);
 }
 
 function dragstarted(d) {
