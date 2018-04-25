@@ -135,8 +135,16 @@ function handleClick(d,i){
     .text("Name: " + d.id);
   d3.select("#nodeurl")
     .html("URL: <a target='_blank' href='" + d.url + "'>Wiki Link</a>");
-  d3.select("#nodecategories")
-    .text("Categories: [ " + d.categories.join(", ") + " ]");
+  
+  // Drop the category information into a list
+  var ul = d3.select("#nodecategories")
+    .html("Categories: <ul></ul>")
+    .selectAll('li')
+    .data(d.categories)
+    .enter()
+    .append('li')
+    .html(String);
+
   d3.select("#nodedescription")
     .text("Description: " + d.description);
 
