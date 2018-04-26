@@ -7,10 +7,7 @@
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script src="force_directed_network.js"></script>
  		<script>
-				function fetchGraph() {
-					var title = $("#searchField").val();
-          var hops = $("#hopsField").val();
-          var branches = $("#branchesField").val();
+				function fetchGraph(title, hops, branches) {
 					var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches;
 					var apiUrl = "/fetch_graph" + urlParams;
 					console.log(title);
@@ -24,6 +21,19 @@
 							displayGraph(svg, res);
 						}
 					});
+				}
+
+				function handleSearch() {
+					var title = $("#searchField").val();
+          var hops = $("#hopsField").val();
+          var branches = $("#branchesField").val();
+					fetchGraph(title, hops, branches);
+				}
+
+				function handleCenter() {
+					var selectedTitle = $("#nodename").text().substring(6);
+					$("#searchField").val(selectedTitle);
+					handleSearch();
 				}
 		</script>
 
@@ -41,7 +51,7 @@
 		    <BLOCKQUOTE id="nodecategories"> </BLOCKQUOTE>
 		    <BLOCKQUOTE id="nodedescription"> </BLOCKQUOTE>
 		  <a><button type="button" class="btn btn-default" onclick="handleDelete()">Delete Node</button></a>
-
+			<a><button type="button" onclick = "handleCenter()">Center Node</button></a>
 		</div>
 		<!-- /sidebar-->
 
@@ -55,7 +65,7 @@
 		  <p>Please enter a Wikipedia subject in the field and click Search</p>
 			<p>For example, search for "computer science" with 5 branches and 2 hops.</p>
       <p>Then click on the nodes that appear to see info about them.<p>
-			<button onclick="fetchGraph()" type="button">Search</button>
+			<button onclick="handleSearch()" type="button">Search</button>
 			<input id="searchField" type="text">
       <label for="branchesField">Branches:</label>
       <input id="branchesField" value="5" min="1" max="10" type="number">
