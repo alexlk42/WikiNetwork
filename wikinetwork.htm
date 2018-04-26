@@ -31,7 +31,7 @@
 				}
 
 				function handleCenter() {
-					var selectedTitle = $("#nodename").text().substring(6);
+					var selectedTitle = $("#nodename").text();
 					$("#searchField").val(selectedTitle);
 					handleSearch();
 				}
@@ -44,27 +44,24 @@
 
 		<!-- Sidebar -->
 		<div class="sidebar">
-		  <a href="#about">About</a>
-		  <a href="#nodeinfo">Node Info</a>
-		    <BLOCKQUOTE id="nodename"> </BLOCKQUOTE>
-		    <BLOCKQUOTE id="nodeurl"> </BLOCKQUOTE>
-		    <BLOCKQUOTE id="nodecategories"> </BLOCKQUOTE>
-		    <BLOCKQUOTE id="nodedescription"> </BLOCKQUOTE>
-		  <a><button type="button" class="btn btn-default" onclick="handleDelete()">Delete Node</button></a>
-			<a><button type="button" onclick = "handleCenter()">Center Node</button></a>
+		  <span>Node Info</span>
+			<div>
+		  	Name: <div class="nodeInfo" id="nodename"></div>
+		  	URL: <div class="nodeInfo" id="nodeurl"></div>
+		  	Categories: <div class="nodeInfo" id="nodecategories"></div>
+		  	Description: <div class="nodeInfo" id="nodedescription"></div>
+				Node Actions:
+				<button type="button" onclick="handleDelete()">Delete Node</button>
+				<button type="button" onclick = "handleCenter()">Center Node</button>
+			</div>
 		</div>
 		<!-- /sidebar-->
 
 
 		<div class="main">
 		  <h3>Welcome to WikiNetwork</h3>
-		  <form action = "http://127.0.0.1:3000/clear" method = "GET">
-			 <input type = "submit" value = "Clear Graph">
-		  </form>
 
-		  <p>Please enter a Wikipedia subject in the field and click Search</p>
-			<p>For example, search for "computer science" with 5 branches and 2 hops.</p>
-      <p>Then click on the nodes that appear to see info about them.<p>
+		  <p>Enter a Wikipedia subject in the field and click Search</p>
 			<button onclick="handleSearch()" type="button">Search</button>
 			<input id="searchField" type="text">
       <label for="branchesField">Branches:</label>

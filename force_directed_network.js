@@ -133,13 +133,13 @@ function handleDblClick(d,i){
 function handleClick(d,i){
   // Add this node's metadata to the sidebar
   d3.select("#nodename")
-    .text("Name: " + d.id);
+    .text(d.id);
   d3.select("#nodeurl")
-    .html("URL: <a target='_blank' href='" + d.url + "'>Wiki Link</a>");
+    .html("<a target='_blank' href='" + d.url + "'>Wiki Link</a>");
 
   // Drop the category information into a list
   var ul = d3.select("#nodecategories")
-    .html("Categories: <ul></ul>")
+    .html("<ul></ul>")
     .selectAll('li')
     .data(d.categories)
     .enter()
@@ -147,7 +147,7 @@ function handleClick(d,i){
     .html(String);
 
   d3.select("#nodedescription")
-    .text("Description: " + d.description);
+    .text(d.description);
 
   //d3.select(this).node().remove(); // This will remove the node upon click
 
