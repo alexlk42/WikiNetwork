@@ -5,6 +5,7 @@ body {
 
 .sidebar {
     width: 210px;
+    height: 90%;
     position: fixed;
     z-index: 1;
     top: 20px;
@@ -12,14 +13,23 @@ body {
     background: #eee;
     overflow-x: hidden;
     padding: 8px 0;
+    border-radius: 6px;
 }
 
-.sidebar a {
+.sidebar > * {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #2196F3;
     display: block;
+}
+
+.nodeInfo {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  display: block;
 }
 
 .sidebar a:hover {
