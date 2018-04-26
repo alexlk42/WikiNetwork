@@ -37,9 +37,17 @@ body {
 }
 
 .main {
-    margin-left: 220px; /* Same width as the sidebar + left position in px */
-    font-size: 20px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    width: 80%;
+    height: 125px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 225px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 @media screen and (max-height: 450px) {
