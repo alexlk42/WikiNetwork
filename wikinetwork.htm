@@ -42,7 +42,6 @@ function handleExpand() {
   var hops = $("#hopsField").val();
   var branches = $("#branchesField").val();
   var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches + "&expandtitle=" + selectedTitle;
-  console.log(urlParams);
   var apiUrl = "/expand_graph" + urlParams;
   $.ajax({url: apiUrl,
     error: function (error) {

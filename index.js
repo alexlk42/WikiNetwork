@@ -37,14 +37,12 @@ app.get('/expand_graph', async function (req, res) {
   let centerTitle = req.query.title;
   let branches = +req.query.branches;
   let numHops = +req.query.hops;
-  console.log(numHops);
-  let expandTitle = +req.query.expandtitle;
-  console.log(expandTitle);
+  let expandTitle = req.query.expandtitle;
 
-  //let oldGraph = await genGraphJSON([centerTitle], branches, numHops);
-  //let newGraph = await genGraphJSON([expandTitle], branches, numHops);
-  //let combined = await joinGraphs(oldGraph, newGraph);
-  //res.send(JSON.stringify(combined));
+  let oldGraph = await genGraphJSON([centerTitle], branches, numHops);
+  let newGraph = await genGraphJSON([expandTitle], branches, numHops);
+  let combined = await joinGraphs(oldGraph, newGraph);
+  res.send(JSON.stringify(combined));
 })
 
 app.get('/clear', function (req, res) {
