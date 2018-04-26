@@ -59,6 +59,7 @@ function displayGraph(svg, json) {
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
+      .attr("class", "node")
       .attr("r", 5)
       .attr("fill", function(d) { return d3Color(1); })
       .call(d3.drag() // Allow for nodes to be moved
@@ -95,7 +96,7 @@ function displayGraph(svg, json) {
         .attr("cy", function(d) { return d.y; });
   }
 
-  // Support zooming (two finger scroll) and 
+  // Support zooming (two finger scroll) and
   // panning (drag on canvas)
   var handleZoom = d3.zoom()
     .on("zoom", zoomed);
@@ -135,7 +136,7 @@ function handleClick(d,i){
     .text("Name: " + d.id);
   d3.select("#nodeurl")
     .html("URL: <a target='_blank' href='" + d.url + "'>Wiki Link</a>");
-  
+
   // Drop the category information into a list
   var ul = d3.select("#nodecategories")
     .html("Categories: <ul></ul>")
@@ -167,7 +168,7 @@ function handleClick(d,i){
   // Reset all lines back to original state
   d3.selectAll("line")
     .attr("id", null)
-    .attr("stroke-width", function(d) { return 1; });  
+    .attr("stroke-width", function(d) { return 1; });
 
   //Modify target lines of selected node
   d3.selectAll("line")
@@ -175,15 +176,15 @@ function handleClick(d,i){
     .transition()
       .attr('fill', '#ff0000')
       .attr("id", "selectedline")
-      .attr("stroke-width", function(d) { return 5; });        
-  
+      .attr("stroke-width", function(d) { return 5; });
+
   //Modify source lines of selected node
   d3.selectAll("line")
     .filter(function(m){ return m.source.id === d.id; })
     .transition()
       .attr('fill', '#ff0000')
       .attr("id", "selectedline")
-      .attr("stroke-width", function(d) { return 5; });    
+      .attr("stroke-width", function(d) { return 5; });
 
 }
 
@@ -196,4 +197,25 @@ function handleDelete(d,i){
 
    //d3.selectAll("line").node().remove();//this removes random links
 
+}
+
+function handleNodeSearch() {
+
+  // Get node name of interest
+  var nodeName = $("#nodeSearchField").val();
+
+  // Search graph for node of interest.
+  d3.selectAll(".node").each(function(d, i) {
+    if (d.id === nodeName) {
+      d3.select(this)
+        .transition()
+        .attr('fill', '#00ff00')
+        .attr("r", 8)
+    } else {
+      d3.select(this)
+        .attr("fill", function(d) { return d3Color(1); })
+        .attr("id", null)
+        .attr("r", 5);
+    }
+  });
 }
