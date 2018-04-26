@@ -8,6 +8,7 @@ var express = require('express');
 var app = express();
 const WikiData = require('./wikiData');
 const genGraphJSON = require('./createGraph');
+const joinGraphs = require('./graphMerge');
 
 app.get('/index.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "index.htm" );
@@ -30,6 +31,20 @@ app.get('/fetch_graph', async function (req, res) {
         //});
 	let graph = await genGraphJSON([centerTitle], branches, numHops);
 	res.send(JSON.stringify(graph));
+})
+
+app.get('/expand_graph', async function (req, res) {
+  let centerTitle = req.query.title;
+  let branches = +req.query.branches;
+  let numHops = +req.query.hops;
+  console.log(numHops);
+  let expandTitle = +req.query.expandtitle;
+  console.log(expandTitle);
+
+  //let oldGraph = await genGraphJSON([centerTitle], branches, numHops);
+  //let newGraph = await genGraphJSON([expandTitle], branches, numHops);
+  //let combined = await joinGraphs(oldGraph, newGraph);
+  //res.send(JSON.stringify(combined));
 })
 
 app.get('/clear', function (req, res) {

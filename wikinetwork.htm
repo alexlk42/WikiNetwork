@@ -35,6 +35,26 @@
 					$("#searchField").val(selectedTitle);
 					handleSearch();
 				}
+
+function handleExpand() {
+  var selectedTitle = $("#nodename").text();
+  var title = $("#searchField").val();
+  var hops = $("#hopsField").val();
+  var branches = $("#branchesField").val();
+  var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches + "&expandtitle=" + selectedTitle;
+  console.log(urlParams);
+  var apiUrl = "/expand_graph" + urlParams;
+  $.ajax({url: apiUrl,
+    error: function (error) {
+      console.error(error);
+    },
+    success: function (res) {
+      var svg = d3.select("svg");
+      initD3(svg);
+      displayGraph(svg, res);
+    }
+  });
+}
 		</script>
 
 	</head>
@@ -53,6 +73,7 @@
 				Node Actions:
 				<button type="button" onclick="handleDelete()">Delete Node</button>
 				<button type="button" onclick = "handleCenter()">Center Node</button>
+				<button type="button" onclick = "handleExpand()">Expand node</button>
 			</div>
 		</div>
 		<!-- /sidebar-->
