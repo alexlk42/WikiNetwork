@@ -103,7 +103,12 @@ class WikiData {
 
       // Once result is fully here, we can parse and do callback
       res.on('end', function () {
-	  callback(JSON.parse(result));
+        callback(JSON.parse(result));
+      });
+
+      // Handle any errors
+      res.on('error', function(err) {
+        console.error(err);
       });
     });
   }
@@ -122,9 +127,17 @@ class WikiData {
       limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 500) ? 500 : limit;
       return new Promise((resolve, reject) => {
-          this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
-            resolve(makeResultArray(result, 'links', 'title'));
-          });
+          try {
+            this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
+              try {
+                resolve(makeResultArray(result, 'links', 'title'));
+              } catch (err) {
+                reject(err);
+              }
+            });
+          } catch (err) {
+            reject(err);
+          }
       });
   }
 
@@ -142,9 +155,17 @@ class WikiData {
       limit = (limit < 0)  ? 1  : limit;
       limit = (limit > 50) ? 50 : limit;
       return new Promise((resolve, reject) => {
-          this.callAPI(this.createURLString('categories', [title]) + '&clshow=!hidden' + `&cllimit=${limit};`, result => {
-            resolve(makeResultArray(result, 'categories', 'title'));
-          });
+          try {
+            this.callAPI(this.createURLString('categories', [title]) + '&clshow=!hidden' + `&cllimit=${limit};`, result => {
+              try {
+                resolve(makeResultArray(result, 'categories', 'title'));
+              } catch (err) {
+                reject(err);
+              }
+            });
+          } catch (err) {
+            reject(err);
+          }
       });
   }
 
@@ -156,9 +177,17 @@ class WikiData {
    */
   static getDescription (title) {
     return new Promise((resolve, reject) => {
-        this.callAPI(this.createURLString('description', [title]), result => {
+        try {
+          this.callAPI(this.createURLString('description', [title]), result => {
+            try {
               resolve(result.query.pages[0].description);
-        });
+            } catch (err) {
+              reject(err);
+            }
+          });
+        } catch (err) {
+          reject(err);
+        }
     });
   }
 
@@ -170,9 +199,17 @@ class WikiData {
    */
   static getURL (title) {
     return new Promise((resolve, reject) => {
-        this.callAPI(this.createURLString('info', [title]) + '&inprop=url', result => {
-            resolve(result.query.pages[0].fullurl);
-        });
+        try {
+          this.callAPI(this.createURLString('info', [title]) + '&inprop=url', result => {
+            try {
+              resolve(result.query.pages[0].fullurl);
+            } catch (err) {
+              reject(err);
+            }
+          });
+        } catch (err) {
+          reject(err);
+        }
     });
   }
 }
