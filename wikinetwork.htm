@@ -11,15 +11,17 @@
 				function fetchGraph(title, hops, branches) {
 					var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches;
 					var apiUrl = "/fetch_graph" + urlParams;
-					console.log(title);
+					$("#LoadingMessage").text("Loading...").show();
 					$.ajax({url: apiUrl,
 						error: function (error) {
 							console.error(error);
+							$("#LoadingMessage").text("): Error: " + error).show();
 						},
 						success: function (res) {
 							var svg = d3.select("svg");
 							initD3(svg);
 							displayGraph(svg, res);
+							$("#LoadingMessage").text("").hide();
 						}
 					});
 				}
@@ -86,7 +88,6 @@
 		<div class="main">
 			<h3 style="text-align: center;">Welcome to WikiNetwork</h3>
 
-			<p>Enter a Wikipedia subject in the left text field and click Search</p>
 			<button onclick="handleSearch()" type="button">Search</button>
 			<input id="searchField" type="text">
 			<label for="branchesField">Branches:</label>
@@ -101,6 +102,7 @@
 
 		<!-- Graph viewport -->
 		<div id="GraphViewportContainer">
+			<div id="LoadingMessage">Enter a Wikipedia subject in the left text field and click Search to start!</div>
 			<svg id="viewport" width="300" height="300"></svg>
 		</div>
 
