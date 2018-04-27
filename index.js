@@ -30,16 +30,6 @@ app.get('/fetch_graph', async function (req, res) {
 	res.send(JSON.stringify(graph));
 })
 
-app.get('/expand_graph', async function (req, res) {
-  let centerTitle = req.query.title;
-  let branches = +req.query.branches;
-  let numHops = +req.query.hops;
-
-  let graph = await genGraphJSON([centerTitle], branches, numHops);
-
-  res.send(graph);
-})
-
 app.get('/clear', function (req, res) {
 })
 
