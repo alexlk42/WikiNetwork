@@ -35,6 +35,10 @@
 					$("#searchField").val(selectedTitle);
 					handleSearch();
 				}
+
+				function handleClear() {					
+					$("#viewport").empty();
+				}
 		</script>
 
 	</head>
@@ -70,6 +74,7 @@
       <input id="hopsField" value="1" min="1" max="3" type="number">
 			<button onclick="handleNodeSearch()" type="button">Highlight Node</button>
 			<input id="nodeSearchField" type="text">
+			<button onclick="handleClear()" type="button">Clear Graph</button>
 		</div>
 		<svg id="viewport" width="960" height="600"></svg>
 
