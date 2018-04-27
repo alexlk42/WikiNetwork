@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script src="force_directed_network.js"></script>
+	  <script src="graphMerge.js"></script>
  		<script>
 				function fetchGraph(title, hops, branches) {
 					var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches;
@@ -39,6 +40,26 @@
 				function handleClear() {					
 					$("#viewport").empty();
 				}
+function handleExpand() {
+  var selectedTitle = $("#nodename").text();
+  var title = $("#searchField").val();
+  var hops = $("#hopsField").val();
+  var branches = $("#branchesField").val();
+  var urlParams = "?title=" + selectedTitle + "&hops=" + hops + "&branches=" + branches;
+  var apiUrl = "/expand_graph" + urlParams;
+  $.ajax({url: apiUrl,
+    error: function (error) {
+      console.error(error);
+    },
+    success: async function (res) {
+      var svg = d3.select("svg");
+      var json = reconstructJSON();
+      var combined = await joinGraphs(json, res);
+      initD3(svg);
+      displayGraph(svg, JSON.stringify(combined));
+    }
+  });
+}
 		</script>
 
 	</head>
@@ -57,6 +78,7 @@
 				Node Actions:
 				<button type="button" onclick="handleDelete()">Delete Node</button>
 				<button type="button" onclick = "handleCenter()">Center Node</button>
+				<button type="button" onclick = "handleExpand()">Expand node</button>
 			</div>
 		</div>
 		<!-- /sidebar-->
