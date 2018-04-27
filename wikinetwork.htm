@@ -37,7 +37,7 @@
 					handleSearch();
 				}
 
-				function handleClear() {					
+				function handleClear() {
 					$("#viewport").empty();
 				}
 				function handleExpand() {
@@ -66,7 +66,6 @@
 
     <body>
 
-
 		<!-- Sidebar -->
 		<div class="sidebar">
 		  <span style="text-align: center; color: #000;">Node Info</span>
@@ -83,22 +82,27 @@
 		</div>
 		<!-- /sidebar-->
 
-
+		<!-- Main bar -->
 		<div class="main">
-		  <h3 style="text-align: center;">Welcome to WikiNetwork</h3>
+			<h3 style="text-align: center;">Welcome to WikiNetwork</h3>
 
-		  <p>Enter a Wikipedia subject in the left text field and click Search</p>
+			<p>Enter a Wikipedia subject in the left text field and click Search</p>
 			<button onclick="handleSearch()" type="button">Search</button>
 			<input id="searchField" type="text">
-      <label for="branchesField">Branches:</label>
-      <input id="branchesField" value="5" min="1" max="10" type="number">
-      <label for="hopsField">Hops:</label>
-      <input id="hopsField" value="1" min="1" max="3" type="number">
+			<label for="branchesField">Branches:</label>
+			<input id="branchesField" value="5" min="1" max="10" type="number">
+			<label for="hopsField">Hops:</label>
+			<input id="hopsField" value="1" min="1" max="3" type="number">
 			<button onclick="handleNodeSearch()" type="button">Highlight Node</button>
 			<input id="nodeSearchField" type="text">
 			<button onclick="handleClear()" type="button">Clear Graph</button>
 		</div>
-		<svg id="viewport" width="960" height="600"></svg>
+		<!-- /Main bar -->
+
+		<!-- Graph viewport -->
+		<div id="GraphViewportContainer">
+			<svg id="viewport" width="960" height="600"></svg>
+		</div>
 
     </body>
 </html>

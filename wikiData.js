@@ -108,7 +108,7 @@ class WikiData {
 
       // Handle any errors
       res.on('error', function(err) {
-        console.error(err);
+        console.error("!!!ERROR: " + err);
       });
     });
   }

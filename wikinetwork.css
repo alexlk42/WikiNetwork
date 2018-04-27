@@ -4,12 +4,11 @@ body {
 }
 
 .sidebar {
-    width: 210px;
-    height: 90%;
-    position: fixed;
-    z-index: 1;
-    top: 20px;
-    left: 10px;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    float: left;
+    width: 300px;
     background: #eee;
     overflow-x: hidden;
     padding: 8px 0;
@@ -37,17 +36,30 @@ body {
 }
 
 .main {
-    width: 80%;
-    height: 125px;
-    position: fixed;
-    z-index: 1;
-    top: 20px;
-    left: 225px;
+    height: 140px;
     background: #eee;
     overflow-x: hidden;
     padding: 10px;
     border-radius: 6px;
     font-size: 16px;
+    margin-left: 305px;
+}
+
+#GraphViewportContainer {
+  position: absolute;
+  top: 170px;
+  bottom: 5px;
+  left: 7px;
+  right: 5px;
+  border: 3px solid #eee;
+  border-radius: 6px;
+  margin-left: 305px;
+  overflow: hidden;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-height: 450px) {
