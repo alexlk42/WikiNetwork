@@ -15,7 +15,7 @@
 					$.ajax({url: apiUrl,
 						error: function (error) {
 							console.error(error);
-							$("#LoadingMessage").text("): Error: " + error).show();
+							$("#LoadingMessage").text("Error! Failed to get graph. Try again. :(").show();
 						},
 						success: function (res) {
 							var svg = d3.select("svg");
