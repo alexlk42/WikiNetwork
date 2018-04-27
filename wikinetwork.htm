@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script src="force_directed_network.js"></script>
+	  <script src="graphMerge.js"></script>
  		<script>
 				function fetchGraph(title, hops, branches) {
 					var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches;
@@ -41,16 +42,18 @@ function handleExpand() {
   var title = $("#searchField").val();
   var hops = $("#hopsField").val();
   var branches = $("#branchesField").val();
-  var urlParams = "?title=" + title + "&hops=" + hops + "&branches=" + branches + "&expandtitle=" + selectedTitle;
+  var urlParams = "?title=" + selectedTitle + "&hops=" + hops + "&branches=" + branches;
   var apiUrl = "/expand_graph" + urlParams;
   $.ajax({url: apiUrl,
     error: function (error) {
       console.error(error);
     },
-    success: function (res) {
+    success: async function (res) {
       var svg = d3.select("svg");
+      var json = reconstructJSON();
+      var combined = await joinGraphs(json, res);
       initD3(svg);
-      displayGraph(svg, res);
+      displayGraph(svg, JSON.stringify(combined));
     }
   });
 }

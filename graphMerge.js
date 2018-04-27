@@ -37,5 +37,3 @@ const joinGraphs = async function (oldJSON, newJSON){
 
   return oldJSON;
 }
-
-module.exports = joinGraphs;

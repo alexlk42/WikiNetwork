@@ -219,3 +219,30 @@ function handleNodeSearch() {
     }
   });
 }
+
+function reconstructJSON() {
+
+  let IDArr = [];
+  let linkArr = [];
+
+  var json = {};
+
+  /*Find all nodes*/
+  d3.selectAll(".node").each(function(node){
+    IDArr.push({id: node.id.replace("_", " "), categories: node.categories, url: node.url, description: node.description});
+  });
+
+  /*Find all connections*/
+  d3.selectAll("line").each(function(link){
+    linkArr.push({
+      source: link.source.id.replace("_", " "),
+      target: link.target.id.replace("_", " ")
+    });
+  });
+
+  json['nodes'] = IDArr;
+  json['links'] = linkArr;
+
+  return json;
+
+}
