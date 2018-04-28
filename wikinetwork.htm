@@ -42,6 +42,7 @@
 				function handleClear() {
 					$("#viewport").empty();
 				}
+
 				function handleExpand() {
 					var selectedTitle = $("#nodename").text();
 					var title = $("#searchField").val();
@@ -49,9 +50,11 @@
 					var branches = $("#branchesField").val();
 					var urlParams = "?title=" + selectedTitle + "&hops=" + hops + "&branches=" + branches;
 					var apiUrl = "/fetch_graph" + urlParams;
+					$("#LoadingMessage").text("Loading...").show();
 					$.ajax({url: apiUrl,
 						error: function (error) {
 							console.error(error);
+							$("#LoadingMessage").text("Error! Failed to get graph. Try again. :(").show();
 						},
 						success: async function (res) {
 							var svg = d3.select("svg");
@@ -59,6 +62,7 @@
 							var combined = await joinGraphs(json, JSON.parse(res));
 							initD3(svg);
 							displayGraph(svg, JSON.stringify(combined));
+							$("#LoadingMessage").text("").hide();
 						}
 					});
 				}
