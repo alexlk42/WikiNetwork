@@ -12,6 +12,45 @@ describe('wikiData', () => {
   });
 
   /*
+   * Unit test for making sure callAPI() calls the error callback on error.
+   */
+  it('should run error callback when call errors', done => {
+    WikiData.callAPI("fake-url",
+      (result) => {
+        expect(true).to.be.false;
+        done();
+      }, (err) => {
+        expect(err).to.be.instanceof(Error);
+        done();
+      });
+  });
+
+  /*
+   * Unit test for making sure callAPI() refuses to issue call to nowhere.
+   */
+  it('should refuse to make call to nowhere', done => {
+    WikiData.callAPI("", (result) => {
+      expect(true).to.be.false;
+      done();
+    }, (err) => {
+      expect(err).to.be.instanceof(Error);
+      expect(err.message).to.include("No URL! Not doing API call.");
+      done();
+    });
+  });
+
+  /*
+   * Unit test for making sure callAPI() refuses to issue call with no callback.
+   */
+  it('should refuse to make call with no callback', done => {
+    WikiData.callAPI("http://", null, (err) => {
+      expect(err).to.be.instanceof(Error);
+      expect(err.message).to.include("No callback! No point in doing API call.");
+      done();
+    });
+  });
+
+  /*
    * Unit test for making sure getForwardLinks()'s limit param works as expected.
    * Asking for 0 links should set limit to 1.
    */

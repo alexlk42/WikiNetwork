@@ -74,43 +74,48 @@ class WikiData {
    * this method as a stand-alone. But, you should use the high-level get methods
    * in this class and try to only use this as a helper when possible.
    */
-  static callAPI (url, callback) {
+  static callAPI (url, callback, errorCallback) {
     if (!url) {
-      console.error('URL is not valid! Not doing API call.');
+      errorCallback(new Error('No URL! Not doing API call.'));
       return;
     }
 
     if (!callback) {
-      console.error('No callback! No point in doing API call.');
+      errorCallback(new Error('No callback! No point in doing API call.'));
       return;
     }
 
     // Do an https GET to the given URL.
-    https.get(url, function (res) {
-      if (!res) {
-        console.error('No response!');
-        return;
-      }
+    try {
+      https.get(url, function (res) {
+        if (!res) {
+          console.error('No response!');
+          return;
+        }
 
-      // Set the output encoding
-      res.setEncoding('utf8');
+        // Set the output encoding
+        res.setEncoding('utf8');
 
-      // Collect result
-      let result = '';
-      res.on('data', function (data) {
-        result += data;
+        // Collect result
+        let result = '';
+        res.on('data', function (data) {
+          result += data;
+        });
+
+        // Once result is fully here, we can parse and do callback
+        res.on('end', function () {
+          callback(JSON.parse(result));
+        });
+
+        // Handle any errors
+        res.on('error', function(err) {
+          console.log("!!!API ERROR: " + err);
+          errorCallback(err);
+        });
       });
-
-      // Once result is fully here, we can parse and do callback
-      res.on('end', function () {
-        callback(JSON.parse(result));
-      });
-
-      // Handle any errors
-      res.on('error', function(err) {
-        console.error("!!!ERROR: " + err);
-      });
-    });
+    } catch (err) {
+      errorCallback(err);
+    }
   }
 
   /*
@@ -134,7 +139,7 @@ class WikiData {
               } catch (err) {
                 reject(err);
               }
-            });
+            }, (err) => reject(err));
           } catch (err) {
             reject(err);
           }
@@ -162,7 +167,7 @@ class WikiData {
               } catch (err) {
                 reject(err);
               }
-            });
+            }, (err) => reject(err));
           } catch (err) {
             reject(err);
           }
@@ -184,7 +189,7 @@ class WikiData {
             } catch (err) {
               reject(err);
             }
-          });
+          }, (err) => reject(err));
         } catch (err) {
           reject(err);
         }
@@ -206,7 +211,7 @@ class WikiData {
             } catch (err) {
               reject(err);
             }
-          });
+          }, (err) => reject(err));
         } catch (err) {
           reject(err);
         }
