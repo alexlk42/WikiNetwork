@@ -1,27 +1,27 @@
 /*
- * CSCIC 5828 - Spring 2018
+ * CSCI 5828 - Spring 2018
  * Team 1
- *
  */
 
+// Setup express
 var express = require('express');
 var app = express();
-const WikiData = require('./wikiData');
-const genGraphJSON = require('./createGraph');
-const joinGraphs = require('./graphMerge');
-
-app.get('/index.htm', function (req, res) {
-   res.sendFile( __dirname + "/" + "index.htm" );
-})
-
 app.use(express.static(__dirname + '/css'));
-
 app.use(express.static(__dirname));
 
+// Get ref to createGraph module
+const genGraphJSON = require('./createGraph');
+
+/*
+ * Main Wiki Network routing.
+ */
 app.get('/wikinetwork.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "wikinetwork.htm" );
 })
 
+/*
+ * Fetch graph routing.
+ */
 app.get('/fetch_graph', async function (req, res) {
         let centerTitle = req.query.title;
         let branches = +req.query.branches;
@@ -30,13 +30,6 @@ app.get('/fetch_graph', async function (req, res) {
 	res.send(JSON.stringify(graph));
 })
 
-app.get('/clear', function (req, res) {
-})
-
-//app.get('/', function (req, res) {
-//  res.send('Welcome to Wikinetworks');
-  //res.render('index', { title: 'Welcome to Wikinode', message: 'Wikinodes' });
-
 /*
  * Root routing. Simply redirects to wikinetwork.htm.
  */
@@ -44,6 +37,9 @@ app.get('/', (req, res) => {
   res.redirect('/wikinetwork.htm');
 });
 
+/*
+ * Listen on port 3000.
+ */
 app.listen(3000, function () {
   console.log('Listening on port 3000!');
 });
