@@ -246,3 +246,19 @@ function reconstructJSON() {
   return json;
 
 }
+
+function reclick(title){
+  d3.selectAll(".node").each(function(d, i) {
+    if (d.id === title) {
+      d3.select(this)
+        .transition()
+        .attr('fill', '#ff0000')
+        .attr("r", 8)
+    } else {
+      d3.select(this)
+        .attr("fill", function(d) { return d3Color(1); })
+        .attr("id", null)
+        .attr("r", 5);
+    }
+  });
+}
