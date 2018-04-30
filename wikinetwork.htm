@@ -43,6 +43,14 @@
 					$("#viewport").empty();
 				}
 
+				function changeColor(selectObject){
+				  document.querySelector("#GraphViewportContainer").style.background=selectObject.value;
+				  document.querySelector("#LoadingMessage").style.color=selectObject.value;
+				  document.querySelector("#LoadingMessage").style.filter="invert(100%)";
+				  console.log(document.querySelector("#LoadingMessage").style);
+
+				}
+
 				function handleExpand() {
 					var selectedTitle = $("#nodename").text();
 					var title = $("#searchField").val();
@@ -100,7 +108,12 @@
 			<input id="hopsField" value="1" min="1" max="3" type="number">
 			<button onclick="handleNodeSearch()" type="button">Highlight Node</button>
 			<input id="nodeSearchField" type="text">
+			<select onchange="changeColor(this)">
+			    <option value="white">Background color: white</option>
+			    <option value="black">Background color: black</option>
+			</select>
 			<button onclick="handleClear()" type="button">Clear Graph</button>
+
 		</div>
 		<!-- /Main bar -->
 
