@@ -109,12 +109,13 @@
 			<input id="hopsField" value="1" min="1" max="3" type="number">
 			<button onclick="handleNodeSearch()" type="button">Highlight Node</button>
 			<input id="nodeSearchField" type="text">
-			<select onchange="changeColor(this)">
-			    <option value="white">Background color: white</option>
-			    <option value="black">Background color: black</option>
-			    <!--<option value="#EE8844">Background color: orange</option>-->
-			    <option value="green">Background color: green</option>
-			    <option value="yellow">Background color: yellow</option>
+			<label for="backgroundColor">Background Color:</label>
+			<select id="backgroundColor" onchange="changeColor(this)">
+			    <option value="white">White</option>
+			    <option value="black">Black</option>
+			    <option value="#E84">Orange</option>
+			    <option value="green">Green</option>
+			    <option value="yellow">Yellow</option>
 			</select>
 			<button onclick="handleClear()" type="button">Clear Graph</button>
 
