@@ -133,7 +133,7 @@ class WikiData {
       limit = (limit > 500) ? 500 : limit;
       return new Promise((resolve, reject) => {
           try {
-            this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit};`, result => {
+            this.callAPI(this.createURLString('links', [title]) + `&pllimit=${limit}`, result => {
               try {
                 resolve(makeResultArray(result, 'links', 'title'));
               } catch (err) {
